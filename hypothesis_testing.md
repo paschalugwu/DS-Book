@@ -268,235 +268,296 @@ else:
 
 In this example, we demonstrate how to perform a one-sided hypothesis test using a two-sample t-test in Python, highlighting the application of one-sided hypotheses in real-world projects where the directionality of the effect is known or of interest.
 
-## 6. **Understanding the t-distribution:**
-
-The t-distribution, also known as Student’s t-distribution, is a probability distribution that is commonly used in statistics, particularly when dealing with small sample sizes and unknown population variances. It was first introduced by William Sealy Gosset, who published it under the pseudonym "Student."
+## 6. Understanding the t-distribution:
 
 ### What is the t-distribution, and what distinguishes it from other probability distributions?
 
-The t-distribution is characterized by its bell-shaped curve, similar to the standard normal distribution (or Z-distribution). However, unlike the standard normal distribution, the t-distribution has heavier tails, which means it allows for more variability in the data. This heavier tail allows the t-distribution to better accommodate uncertainty, making it more suitable for smaller sample sizes.
+The t-distribution, also known as Student's t-distribution, is a type of probability distribution that is symmetric and bell-shaped, much like the normal distribution. However, it has heavier tails compared to the normal distribution. The key parameter that defines the shape of the t-distribution is the degrees of freedom, denoted by \( \nu \) (pronounced "nu"). The degrees of freedom represent the number of observations in the sample minus one.
 
 ### In what situations is the t-distribution preferred over the standard normal distribution?
 
-The t-distribution is preferred over the standard normal distribution in situations where:
-
-- The sample size is small (typically less than 30).
-- The population variance is unknown.
-
-Because the t-distribution accounts for the variability in smaller samples and the uncertainty of unknown population variances, it provides more accurate estimates of population parameters.
+The t-distribution is preferred over the standard normal distribution when dealing with small sample sizes or when the population standard deviation is unknown. In situations where the sample size is large (typically more than 30) and the population standard deviation is known, the t-distribution converges to the standard normal distribution.
 
 ### Can you provide examples of when the t-distribution is used in hypothesis testing?
 
-Certainly! The t-distribution is commonly used in hypothesis testing scenarios, such as:
-
-1. Testing the mean of a population when the sample size is small.
-2. Comparing two means from independent samples when the population variances are unknown and assumed to be unequal.
-3. Conducting confidence intervals for population means with small sample sizes.
-
-### Example Code Snippet:
+#### Example 1: Testing the Mean of a Population
+Let's say we want to test whether the mean height of a certain population is equal to 65 inches. We collect a sample of 20 individuals from the population and find the sample mean height to be 63 inches, with a sample standard deviation of 5 inches. Since we don't know the population standard deviation, we use the t-distribution to calculate the t-statistic and determine the probability of observing the sample mean if the population mean is indeed 65 inches.
 
 ```python
 import numpy as np
-import scipy.stats as st
+from scipy.stats import t
 
-# Example of hypothesis testing using the t-distribution
-# Let's say we have sample data and want to test if the mean is significantly different from a given value
-sample_data = [10.2, 9.5, 11.1, 10.8, 10.4, 9.9, 10.6, 10.3, 10.0, 9.7]
+# Sample statistics
+sample_mean = 63
+sample_std = 5
+sample_size = 20
 
-# Assuming the population mean is 10
-pop_mean = 10
+# Population mean
+population_mean = 65
 
-# Calculate sample statistics
-sample_mean = np.mean(sample_data)
-sample_std = np.std(sample_data, ddof=1)  # ddof=1 for unbiased estimation of sample standard deviation
+# Degrees of freedom
+df = sample_size - 1
 
 # Calculate t-statistic
-t_statistic = (sample_mean - pop_mean) / (sample_std / np.sqrt(len(sample_data)))
+t_statistic = (sample_mean - population_mean) / (sample_std / np.sqrt(sample_size))
 
 # Calculate p-value
-p_value = st.t.cdf(t_statistic, df=len(sample_data) - 1)
-
-# Print results
-print("Sample Mean:", sample_mean)
-print("T-Statistic:", t_statistic)
-print("P-Value:", p_value)
-```
-
-In this example, we calculate the t-statistic and p-value to test whether the sample mean is significantly different from a given population mean. The t-distribution is used to compute the p-value, which helps us determine the statistical significance of our hypothesis test results.
-
-## 7. **Degrees of freedom and their significance:**
-
-### Define degrees of freedom in the context of the t-distribution:
-
-In the context of the t-distribution, degrees of freedom (df) represent the number of independent observations in a sample that are available to estimate a parameter. Specifically, in hypothesis testing, degrees of freedom correspond to the number of observations in the sample minus the number of parameters estimated from the sample.
-
-### How do degrees of freedom affect the shape and behavior of the t-distribution?
-
-Degrees of freedom have a significant impact on the shape and behavior of the t-distribution. As the degrees of freedom increase, the t-distribution approaches the shape of the standard normal distribution (Z-distribution), becoming more symmetrical and bell-shaped. Conversely, as the degrees of freedom decrease, the t-distribution becomes more spread out with heavier tails.
-
-### Why do degrees of freedom decrease when estimating parameters, and what implications does this have for hypothesis testing?
-
-Degrees of freedom decrease when estimating parameters because each parameter estimated from the sample reduces the number of independent observations available for estimating other parameters. For example, when estimating the sample mean, one degree of freedom is used because the mean is calculated from the sample data.
-
-This reduction in degrees of freedom has implications for hypothesis testing because it affects the precision of the estimates and the reliability of the test statistics. With fewer degrees of freedom, the t-distribution becomes more spread out, leading to wider confidence intervals and less precise hypothesis test results. Therefore, it is essential to consider the degrees of freedom when interpreting the results of hypothesis tests. 
-
-### Example Code Snippet:
-
-```python
-import numpy as np
-import scipy.stats as st
-
-# Example demonstrating the effect of degrees of freedom on the t-distribution
-# Plotting t-distributions with different degrees of freedom
-
-x = np.linspace(-4, 4, 1000)
-dfs = [1, 2, 5, 10]
-
-for df in dfs:
-    y = st.t.pdf(x, df)
-    plt.plot(x, y, label=f'df = {df}')
-
-plt.title('Effect of Degrees of Freedom on the t-Distribution')
-plt.xlabel('x')
-plt.ylabel('Probability Density')
-plt.legend()
-plt.show()
-```
-
-In this example, we generate and plot t-distributions with varying degrees of freedom. As the degrees of freedom increase, the t-distribution approaches the standard normal distribution, illustrating the impact of degrees of freedom on the shape and behavior of the t-distribution.
-
-## 8. **Impact of sample size on the t-distribution:**
-
-### How does sample size influence the characteristics of the t-distribution?
-
-Sample size plays a crucial role in shaping the characteristics of the t-distribution. As the sample size increases, the t-distribution converges towards the standard normal distribution (Z-distribution). This convergence occurs because larger sample sizes provide more information about the population, leading to a more precise estimation of parameters such as the mean.
-
-### Discuss the relationship between sample size and the accuracy of hypothesis testing using the t-distribution.
-
-The relationship between sample size and the accuracy of hypothesis testing using the t-distribution is direct. With larger sample sizes, hypothesis tests tend to be more accurate and reliable. This is because larger samples provide more precise estimates of population parameters, resulting in narrower confidence intervals and more accurate p-values.
-
-### Explain how increasing sample size affects the precision of hypothesis testing outcomes.
-
-Increasing sample size improves the precision of hypothesis testing outcomes in several ways:
-1. **Reduced Variability:** Larger samples tend to have less variability, leading to more stable estimates of population parameters.
-2. **Narrower Confidence Intervals:** With more data points, confidence intervals become narrower, indicating higher precision in estimating the population parameter.
-3. **More Accurate p-values:** As the sample size increases, the standard error decreases, resulting in more accurate p-values and better discrimination between null and alternative hypotheses.
-
-### Example Code Snippet:
-
-```python
-import numpy as np
-import scipy.stats as st
-import matplotlib.pyplot as plt
-
-# Example demonstrating the impact of sample size on the t-distribution
-# Plotting t-distributions for different sample sizes
-
-x = np.linspace(-4, 4, 1000)
-sample_sizes = [10, 30, 50, 100]
-
-for size in sample_sizes:
-    df = size - 1
-    y = st.t.pdf(x, df)
-    plt.plot(x, y, label=f'n = {size}')
-
-plt.title('Impact of Sample Size on the t-Distribution')
-plt.xlabel('x')
-plt.ylabel('Probability Density')
-plt.legend()
-plt.show()
-```
-
-In this example, we plot t-distributions for different sample sizes. As the sample size increases, the shape of the t-distribution becomes closer to the standard normal distribution, highlighting the influence of sample size on the characteristics of the t-distribution.
-
-## 9. **Application of the t-distribution in hypothesis testing:**
-
-### Can you walk through the process of hypothesis testing using the t-distribution?
-
-Hypothesis testing involves making decisions about population parameters based on sample data. Here's a step-by-step process for hypothesis testing using the t-distribution:
-1. **Formulate Hypotheses:** Define the null hypothesis (H0) and the alternative hypothesis (H1) based on the research question.
-2. **Choose Significance Level:** Select the desired level of significance (α), typically 0.05.
-3. **Collect Data:** Gather sample data relevant to the hypothesis being tested.
-4. **Calculate Test Statistic:** Compute the t-statistic using the sample data and relevant population parameters (if available).
-5. **Determine Critical Value or P-value:** Based on the hypothesis being tested, find the critical value from the t-distribution table or calculate the p-value.
-6. **Make Decision:** Compare the test statistic to the critical value or use the p-value to decide whether to reject the null hypothesis.
-7. **Draw Conclusion:** Based on the decision made in step 6, either reject or fail to reject the null hypothesis and interpret the results in the context of the research question.
-
-### Provide examples of hypothesis testing scenarios where the t-distribution is applied.
-
-Example 1: Testing the mean height of students in a school against a known population mean.
-Example 2: Comparing the effectiveness of two different teaching methods on student performance.
-Example 3: Analyzing the impact of a new drug on patient recovery time compared to a standard treatment.
-
-### How are p-values calculated and interpreted in hypothesis testing using the t-distribution?
-
-The p-value represents the probability of observing the sample data or more extreme results under the assumption that the null hypothesis is true. Here's how p-values are calculated and interpreted:
-- **Calculate P-value:** Using the t-distribution, calculate the probability of obtaining the observed sample statistic or a more extreme value.
-- **Interpretation:** If the p-value is less than or equal to the significance level (α), typically 0.05, then the null hypothesis is rejected. A smaller p-value indicates stronger evidence against the null hypothesis.
-- **Decision:** If the p-value is greater than the significance level, the null hypothesis is not rejected, and there is insufficient evidence to support the alternative hypothesis.
-
-### Example Code Snippet:
-
-```python
-import scipy.stats as st
-
-# Example of hypothesis testing using the t-distribution
-# Calculate p-value for a one-sample t-test
-sample_data = [2.5, 3.1, 2.8, 3.5, 2.9]
-pop_mean = 3.0
-alpha = 0.05
-
-t_statistic, p_value = st.ttest_1samp(sample_data, pop_mean)
+p_value = 2 * (1 - t.cdf(np.abs(t_statistic), df))
 
 print("t-statistic:", t_statistic)
 print("p-value:", p_value)
-
-if p_value <= alpha:
-    print("Reject the null hypothesis")
-else:
-    print("Fail to reject the null hypothesis")
 ```
 
-In this example, we perform a one-sample t-test to compare the mean of a sample dataset (`sample_data`) to a known population mean (`pop_mean`). We calculate the p-value and make a decision based on the significance level (`alpha`).
+#### Example 2: Comparing Two Population Means
+Suppose we want to compare the mean scores of two different teaching methods. We collect samples from both groups and find their respective means and standard deviations. Again, if the population standard deviations are unknown, we would use the t-distribution for hypothesis testing.
 
-## 10. **Understanding other distributions in hypothesis testing:**
+```python
+# Sample statistics for method A
+sample_mean_A = 75
+sample_std_A = 8
+sample_size_A = 30
+
+# Sample statistics for method B
+sample_mean_B = 72
+sample_std_B = 7
+sample_size_B = 30
+
+# Degrees of freedom (assuming equal sample sizes)
+df = sample_size_A + sample_size_B - 2
+
+# Calculate pooled standard deviation
+pooled_std = np.sqrt(((sample_size_A - 1) * sample_std_A**2 + (sample_size_B - 1) * sample_std_B**2) / df)
+
+# Calculate t-statistic
+t_statistic = (sample_mean_A - sample_mean_B) / (pooled_std * np.sqrt(1/sample_size_A + 1/sample_size_B))
+
+# Calculate p-value
+p_value = 2 * (1 - t.cdf(np.abs(t_statistic), df))
+
+print("t-statistic:", t_statistic)
+print("p-value:", p_value)
+```
+
+These examples demonstrate how the t-distribution is utilized in hypothesis testing scenarios where the population standard deviation is unknown or when comparing two population means. This knowledge is crucial for making informed decisions in various research and data analysis projects.
+
+## 7. Degrees of freedom and their significance:
+
+### Define degrees of freedom in the context of the t-distribution:
+
+In the context of the t-distribution, degrees of freedom (\( \nu \)) represent the number of independent pieces of information available to estimate a parameter. Specifically, in hypothesis testing, degrees of freedom refer to the number of observations in the sample minus one.
+
+### How do degrees of freedom affect the shape and behavior of the t-distribution?
+
+The degrees of freedom affect the shape and behavior of the t-distribution in the following ways:
+- As the degrees of freedom increase, the t-distribution approaches the shape of the standard normal distribution (i.e., a bell-shaped curve with thinner tails).
+- Conversely, as the degrees of freedom decrease, the tails of the t-distribution become heavier, leading to a flatter and wider distribution compared to the normal distribution.
+
+### Why do degrees of freedom decrease when estimating parameters, and what implications does this have for hypothesis testing?
+
+Degrees of freedom decrease when estimating parameters because of the loss of information due to the estimation process. In hypothesis testing, when estimating parameters such as the population mean or variance from a sample, we use the sample data to make these estimates. However, using the data to estimate parameters reduces the effective amount of information available for making inferences.
+
+Implications for hypothesis testing:
+- A decrease in degrees of freedom leads to a wider t-distribution, which means that there is more uncertainty in our estimates.
+- This increased uncertainty affects the critical values and p-values used in hypothesis testing. With fewer degrees of freedom, the critical values become larger, making it harder to reject the null hypothesis.
+- In practical terms, when the degrees of freedom are low, we need a larger difference between sample statistics and hypothesized population parameters to declare statistical significance.
+
+Understanding the concept of degrees of freedom is essential for correctly interpreting the results of hypothesis tests and making informed decisions in data analysis projects. Let's illustrate this concept with an example:
+
+```python
+import numpy as np
+from scipy.stats import t
+
+# Sample data
+data = np.array([15, 18, 20, 22, 25])
+
+# Sample mean and standard deviation
+sample_mean = np.mean(data)
+sample_std = np.std(data, ddof=1)  # ddof=1 for unbiased estimation
+
+# Degrees of freedom
+df = len(data) - 1
+
+# Calculate t-statistic
+t_statistic = (sample_mean - 20) / (sample_std / np.sqrt(len(data)))
+
+# Calculate p-value
+p_value = 2 * (1 - t.cdf(np.abs(t_statistic), df))
+
+print("t-statistic:", t_statistic)
+print("p-value:", p_value)
+```
+
+In this example, we calculate the t-statistic and p-value for testing whether the population mean is 20. The degrees of freedom are determined by the sample size minus one. Understanding degrees of freedom helps us interpret the results of this hypothesis test accurately.
+
+## 8. Impact of sample size on the t-distribution:
+
+### How does sample size influence the characteristics of the t-distribution?
+
+Sample size plays a crucial role in shaping the characteristics of the t-distribution. Specifically:
+- As the sample size increases, the t-distribution approaches the shape of the standard normal distribution.
+- With larger sample sizes, the tails of the t-distribution become thinner, resembling the normal distribution more closely.
+- Conversely, smaller sample sizes result in wider tails and a flatter distribution.
+
+### Discuss the relationship between sample size and the accuracy of hypothesis testing using the t-distribution.
+
+The relationship between sample size and the accuracy of hypothesis testing using the t-distribution can be summarized as follows:
+- Larger sample sizes lead to more accurate hypothesis testing results.
+- With larger sample sizes, the estimate of the population parameter (e.g., mean or standard deviation) becomes more precise, reducing the variability in the sample mean or difference between sample means.
+- This increased precision results in narrower confidence intervals and more reliable p-values, making it easier to detect true differences or effects if they exist in the population.
+
+### Explain how increasing sample size affects the precision of hypothesis testing outcomes.
+
+Increasing sample size enhances the precision of hypothesis testing outcomes in the following ways:
+- Greater sample size reduces sampling variability, resulting in estimates that are closer to the true population parameters.
+- Narrower confidence intervals provide a more precise range within which the true population parameter is likely to fall.
+- Smaller standard errors lead to more accurate estimates of the mean difference or effect size, making it easier to detect statistically significant results.
+- With larger sample sizes, the t-distribution approaches the standard normal distribution, allowing for more accurate interpretation of critical values and p-values in hypothesis testing.
+
+Let's illustrate the impact of sample size on hypothesis testing precision with an example:
+
+```python
+import numpy as np
+from scipy.stats import t
+
+# Generate data with known population mean and standard deviation
+population_mean = 50
+population_std = 10
+sample_sizes = [10, 50, 100]
+
+for size in sample_sizes:
+    # Generate sample data
+    sample_data = np.random.normal(population_mean, population_std, size)
+    
+    # Calculate sample mean and standard error
+    sample_mean = np.mean(sample_data)
+    std_error = np.std(sample_data, ddof=1) / np.sqrt(size)
+    
+    # Calculate t-statistic and p-value
+    t_statistic = (sample_mean - population_mean) / std_error
+    p_value = 2 * (1 - t.cdf(np.abs(t_statistic), size - 1))  # Two-tailed test
+    
+    print(f"Sample size: {size}")
+    print(f"Sample mean: {sample_mean:.2f}")
+    print(f"Standard Error: {std_error:.2f}")
+    print(f"t-statistic: {t_statistic:.2f}")
+    print(f"p-value: {p_value:.4f}\n")
+```
+
+In this example, we simulate data from a population with a known mean and standard deviation. We then generate samples of different sizes and perform hypothesis testing to determine if the sample mean differs significantly from the population mean. As the sample size increases, the precision of the hypothesis testing outcomes improves, with narrower confidence intervals and more accurate p-values.
+
+## 9. Application of the t-distribution in hypothesis testing:
+
+### Can you walk through the process of hypothesis testing using the t-distribution?
+
+The process of hypothesis testing using the t-distribution typically involves the following steps:
+1. **Formulate hypotheses:** Define the null hypothesis (\( H_0 \)) and alternative hypothesis (\( H_1 \)).
+2. **Select significance level:** Choose the desired level of significance (\( \alpha \)), often set to 0.05.
+3. **Collect data:** Obtain sample data relevant to the hypothesis being tested.
+4. **Calculate test statistic:** Compute the t-statistic using the sample data and relevant parameters (e.g., sample mean, sample standard deviation, population mean, etc.).
+5. **Determine critical value or p-value:** Based on the degrees of freedom and chosen significance level, find the critical value from the t-distribution table or calculate the p-value.
+6. **Make a decision:** Compare the calculated test statistic to the critical value or p-value. If the test statistic falls in the rejection region (i.e., beyond the critical value) or if the p-value is less than \( \alpha \), reject the null hypothesis. Otherwise, fail to reject the null hypothesis.
+
+### Provide examples of hypothesis testing scenarios where the t-distribution is applied.
+
+#### Example 1: Testing a Population Mean
+- Null hypothesis (\( H_0 \)): The population mean is equal to a specified value.
+- Alternative hypothesis (\( H_1 \)): The population mean is not equal to the specified value.
+- Example: Testing whether the mean IQ score of a group of students is significantly different from the national average IQ score of 100.
+
+#### Example 2: Comparing Two Population Means
+- Null hypothesis (\( H_0 \)): The means of two populations are equal.
+- Alternative hypothesis (\( H_1 \)): The means of two populations are not equal.
+- Example: Comparing the effectiveness of two different drugs in reducing blood pressure.
+
+### How are p-values calculated and interpreted in hypothesis testing using the t-distribution?
+
+- **Calculation:** The p-value represents the probability of observing the test statistic (or one more extreme) under the null hypothesis. It is calculated as the area under the t-distribution curve beyond the observed test statistic.
+- **Interpretation:** 
+  - If the p-value is less than the chosen significance level (\( \alpha \)), typically 0.05, it suggests that the observed result is statistically significant, and we reject the null hypothesis.
+  - If the p-value is greater than \( \alpha \), we fail to reject the null hypothesis, indicating that there is not enough evidence to conclude that the observed result is statistically significant.
+
+Let's illustrate hypothesis testing using the t-distribution with an example:
+
+```python
+import numpy as np
+from scipy.stats import t
+
+# Sample data
+sample_data = np.array([10, 12, 15, 14, 13, 11, 10, 12, 14, 16])
+
+# Population mean
+population_mean = 12
+
+# Calculate sample statistics
+sample_mean = np.mean(sample_data)
+sample_std = np.std(sample_data, ddof=1)  # ddof=1 for unbiased estimation
+sample_size = len(sample_data)
+
+# Degrees of freedom
+df = sample_size - 1
+
+# Calculate t-statistic
+t_statistic = (sample_mean - population_mean) / (sample_std / np.sqrt(sample_size))
+
+# Calculate p-value
+p_value = 2 * (1 - t.cdf(np.abs(t_statistic), df))  # Two-tailed test
+
+print("Sample mean:", sample_mean)
+print("t-statistic:", t_statistic)
+print("p-value:", p_value)
+```
+
+In this example, we perform a two-tailed hypothesis test to determine if the sample mean differs significantly from the population mean. We calculate the t-statistic and p-value using the sample data and the known population mean. If the p-value is less than \( \alpha \), we reject the null hypothesis in favor of the alternative hypothesis.
+
+## 10. Understanding other distributions in hypothesis testing:
 
 ### What is the F-distribution, and how does it differ from the t-distribution?
 
-- **Definition:** The F-distribution is a probability distribution that arises in the context of hypothesis testing when comparing variances or ratios of variances. It is defined by two sets of degrees of freedom.
-- **Difference from t-distribution:** While both the t-distribution and F-distribution are used in hypothesis testing, they serve different purposes. The t-distribution is primarily used for testing differences in means, especially with small sample sizes, whereas the F-distribution is used for testing the equality of variances or ratios of variances between groups.
+- **F-distribution:** The F-distribution is a probability distribution that arises in the context of comparing variances or ratios of variances. It is positively skewed and unbounded, with two parameters: degrees of freedom for the numerator (\( \nu_1 \)) and degrees of freedom for the denominator (\( \nu_2 \)).
+  
+- **Differences from t-distribution:**
+  - The t-distribution is used for testing hypotheses about means, whereas the F-distribution is primarily used for comparing variances or ratios of variances.
+  - The t-distribution is symmetric and bell-shaped, whereas the F-distribution is positively skewed.
+  - The t-distribution has one parameter (degrees of freedom), while the F-distribution has two parameters (degrees of freedom for the numerator and denominator).
 
 ### How is the F-distribution used in hypothesis testing, particularly in testing equality of variances?
 
-- **Equality of Variances:** In hypothesis testing, particularly in scenarios like ANOVA (Analysis of Variance) or comparing variances between groups, the F-distribution is used to test whether the variances in different groups are equal.
-- **Process:** The F-statistic is calculated by dividing the variance of one sample by the variance of another sample. This statistic follows an F-distribution under the null hypothesis of equal variances. The p-value obtained from the F-distribution helps determine whether to accept or reject the null hypothesis.
+The F-distribution is used in hypothesis testing to compare variances or ratios of variances. One common application is testing the equality of variances between two populations, known as Bartlett's test or Levene's test.
+  
+- **Process:**
+  1. Formulate null and alternative hypotheses regarding the equality of variances.
+  2. Calculate the test statistic, which is the ratio of the sample variances.
+  3. Determine the critical value or p-value from the F-distribution.
+  4. Make a decision based on the comparison of the test statistic and critical value or p-value.
 
 ### Explain the significance of the chi-squared distribution in hypothesis testing and its specific applications, such as testing goodness of fit and analyzing categorical data.
 
-- **Significance:** The chi-squared distribution is crucial in hypothesis testing, particularly for analyzing categorical data and testing goodness of fit.
-- **Goodness of Fit:** In goodness of fit tests, the chi-squared distribution is used to assess how well an observed frequency distribution fits an expected theoretical distribution. It quantifies the difference between observed and expected frequencies.
-- **Categorical Data Analysis:** The chi-squared distribution is also used in contingency table analysis, where categorical variables are compared to assess independence or association between them.
-- **Process:** The chi-squared statistic is calculated by summing the squared differences between observed and expected frequencies, divided by the expected frequencies. This statistic follows a chi-squared distribution, and the p-value obtained helps determine whether the observed data significantly deviates from the expected distribution.
+- **Chi-squared distribution:** The chi-squared distribution is a probability distribution that arises in the context of testing the goodness of fit and analyzing categorical data. It is non-negative and skewed to the right, with one parameter: degrees of freedom (\( \nu \)).
 
-### Example Code Snippet:
+- **Applications:**
+  1. **Goodness of fit test:** Determines whether the observed frequency distribution of a categorical variable fits an expected theoretical distribution.
+  2. **Contingency table analysis:** Examines the association between two categorical variables by comparing observed and expected frequencies in a contingency table.
+  3. **Test of independence:** Determines whether there is a statistically significant association between two categorical variables in a contingency table.
+
+Understanding the F-distribution and chi-squared distribution is crucial for conducting hypothesis tests involving variances, categorical data, and goodness-of-fit analyses in various real-world data science projects.
+
+Let's illustrate the application of the chi-squared distribution in hypothesis testing with an example:
 
 ```python
-import scipy.stats as st
+import numpy as np
+from scipy.stats import chi2_contingency
 
-# Example of using the F-distribution for testing equality of variances
-# Calculate p-value for testing equality of variances
-sample1 = [10, 12, 15, 11, 13]
-sample2 = [8, 11, 9, 10, 12]
+# Example data: Observed frequencies in a contingency table
+observed = np.array([[30, 10, 20],
+                     [15, 15, 25]])
 
-f_statistic, p_value = st.f_oneway(sample1, sample2)
+# Perform chi-squared test of independence
+chi2_stat, p_value, dof, expected = chi2_contingency(observed)
 
-print("F-statistic:", f_statistic)
+print("Chi-squared statistic:", chi2_stat)
+print("Degrees of freedom:", dof)
 print("p-value:", p_value)
-
-if p_value <= 0.05:
-    print("Reject the null hypothesis of equal variances")
-else:
-    print("Fail to reject the null hypothesis of equal variances")
+print("Expected frequencies:\n", expected)
 ```
 
-In this example, we use the F-distribution to test whether the variances of two samples (`sample1` and `sample2`) are equal. The `f_oneway` function from SciPy's `stats` module computes the F-statistic and p-value, which are then interpreted to make a decision regarding the equality of variances.
+In this example, we perform a chi-squared test of independence to determine whether there is a significant association between two categorical variables. We calculate the chi-squared statistic, degrees of freedom, p-value, and expected frequencies under the null hypothesis of independence. If the p-value is less than the chosen significance level, we reject the null hypothesis and conclude that there is a statistically significant association between the variables.
