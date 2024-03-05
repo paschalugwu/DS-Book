@@ -13,18 +13,18 @@ The line of best fit, also known as the regression line, is the straight line th
 ### Equation of the Line
 The equation of the line of best fit is given by:
 
-\[ y = mx + b \]
+$$\[ y = mx + b \]
 
 Where:
-- \( y \) is the dependent variable we aim to predict.
-- \( x \) is the independent variable used for prediction.
-- \( m \) is the slope of the line, representing the rate of change.
-- \( b \) is the y-intercept, indicating the value of \( y \) when \( x \) is 0.
+- $$\( y \) is the dependent variable we aim to predict.
+- $$\( x \) is the independent variable used for prediction.
+- $$\( m \) is the slope of the line, representing the rate of change.
+- $$\( b \) is the y-intercept, indicating the value of $$\( y \) when $$\( x \) is 0.
 
 ## How Least Squares Regression Works
 
 1. **Calculate the Mean**
-   - Find the mean of both the independent (\( \bar{x} \)) and dependent (\( \bar{y} \)) variables.
+   - Find the mean of both the independent $$(\( \bar{x} \)) and dependent $$(\( \bar{y} \)) variables.
 
 2. **Calculate the Slope (\( m \))**
    - Determine the slope (\( m \)) using the formula:
