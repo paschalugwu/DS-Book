@@ -219,4 +219,4 @@ Understanding and applying these concepts and code snippets will equip you with 
 
 © [2024] [Paschal Ugwu]
 
-** AI Use Disclosure: I utilized ChatGPT to assist in the generation and refinement of technical content for this note. **
+**AI Use Disclosure: I utilized ChatGPT to assist in the generation and refinement of technical content for this note.**
