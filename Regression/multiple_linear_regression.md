@@ -10,14 +10,15 @@ Multiple linear regression is a statistical method used to analyze the relations
 
 ### Understanding the Concept:
 
-In multiple linear regression, the relationship between the independent variables (predictors) \( x_1, x_2, ..., x_n \) and the dependent variable \( y \) is represented by the equation:
+In multiple linear regression, the relationship between the independent variables (predictors) \( x_1, x_2, \ldots, x_n \) and the dependent variable \( y \) is represented by the equation:
 
-\[ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n + \varepsilon \]
+\[ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \varepsilon \]
 
 Where:
+
 - \( \beta_0 \) is the intercept (the value of \( y \) when all independent variables are zero).
-- \( \beta_1, \beta_2, ..., \beta_n \) are the coefficients of the independent variables.
-- \( x_1, x_2, ..., x_n \) are the independent variables.
+- \( \beta_1, \beta_2, \ldots, \beta_n \) are the coefficients of the independent variables.
+- \( x_1, x_2, \ldots, x_n \) are the independent variables.
 - \( \varepsilon \) is the error term.
 
 ### Implementing Multiple Linear Regression:
