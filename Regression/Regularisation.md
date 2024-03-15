@@ -183,9 +183,9 @@ In many machine learning algorithms, features with larger scales or variances ca
 1. **Standardisation:**
    Standardisation scales the features to have a mean of 0 and a standard deviation of 1. It is calculated using the following formula:
 
-   $$
-   x_{\text{std}} = \frac{x - \mu}{\sigma}
-   $$
+$$
+x_{\text{std}} = \frac{x - \mu}{\sigma}
+$$
 
    Where:
    - $x$ is the original feature value.
