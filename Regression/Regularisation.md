@@ -282,9 +282,7 @@ LASSO (Least Absolute Shrinkage and Selection Operator) regression, similar to R
 
 The loss function for LASSO regression is given by:
 
-$$
-\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} |w_j|
-$$
+![equation](https://latex.codecogs.com/png.latex?\dpi{300}&space;\bg_white&space;\text{Loss}&space;=&space;\sum_{i=1}^{n}&space;(y_i&space;-&space;\hat{y}_i)^2&space;&plus;&space;\lambda&space;\sum_{j=1}^{p}&space;|w_j|)
 
 Where the terms have the same meanings as in Ridge regression.
 
