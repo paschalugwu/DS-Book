@@ -197,9 +197,9 @@ $$
 2. **Normalization (Min-Max Scaling):**
    Normalization scales the features to a fixed range, typically between 0 and 1. It is calculated using the following formula:
 
-   $$
-   x_{\text{norm}} = \frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}
-   $$
+$$
+x_{\text{norm}} = \frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}
+$$
 
    Where:
    - $x_{\text{min}}$ is the minimum value of the feature.
@@ -261,9 +261,7 @@ Ridge regression adds a penalty term to the ordinary least squares (OLS) loss fu
 
 The loss function for Ridge regression is given by:
 
-$$
-\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} w_j^2
-$$
+$$\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} w_j^2$$
 
 Where:
 - $y_i$ is the observed value.
