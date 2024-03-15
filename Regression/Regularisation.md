@@ -261,9 +261,7 @@ Ridge regression adds a penalty term to the ordinary least squares (OLS) loss fu
 
 The loss function for Ridge regression is given by:
 
-$$
-\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} w_j^2
-$$
+![equation](https://latex.codecogs.com/png.latex?\dpi{300}&space;\bg_white&space;\text{Loss}&space;=&space;\sum_{i=1}^{n}&space;(y_i&space;-&space;\hat{y}_i)^2&space;&plus;&space;\lambda&space;\sum_{j=1}^{p}&space;w_j^2)
 
 Where:
 - $y_i$ is the observed value.
