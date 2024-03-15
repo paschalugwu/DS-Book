@@ -67,17 +67,18 @@ Regularisation techniques, such as L1 and L2 regularisation, are essential tools
 L1 regularisation, also known as Lasso (Least Absolute Shrinkage and Selection Operator), adds a penalty term to the loss function that is proportional to the absolute value of the coefficients of the model.
 
 **Mathematical Representation:**
-The L1 regularisation term is added to the loss function as follows:
 
-\[
+The L1 regularization term is added to the loss function as follows:
+
+$$
 \text{Loss} + \lambda \sum_{i=1}^{n} |w_i|
-\]
+$$
 
 Where:
-- \(\text{Loss}\) represents the original loss function without regularisation.
-- \(w_i\) are the model coefficients.
-- \(n\) is the total number of coefficients.
-- \(\lambda\) is the regularisation parameter, controlling the strength of regularisation.
+- $\text{Loss}$ represents the original loss function without regularization.
+- $w_i$ are the model coefficients.
+- $n$ is the total number of coefficients.
+- $\lambda$ is the regularization parameter, controlling the strength of regularization.
 
 **Behavior:**
 - L1 regularisation encourages sparsity in the coefficients, meaning it tends to force some coefficients to be exactly zero.
@@ -93,17 +94,18 @@ Where:
 L2 regularisation, also known as Ridge regularisation, adds a penalty term to the loss function that is proportional to the square of the coefficients of the model.
 
 **Mathematical Representation:**
-The L2 regularisation term is added to the loss function as follows:
 
-\[
+The L2 regularization term is added to the loss function as follows:
+
+$$
 \text{Loss} + \lambda \sum_{i=1}^{n} w_i^2
-\]
+$$
 
 Where:
-- \(\text{Loss}\) represents the original loss function without regularisation.
-- \(w_i\) are the model coefficients.
-- \(n\) is the total number of coefficients.
-- \(\lambda\) is the regularisation parameter, controlling the strength of regularisation.
+- $\text{Loss}$ represents the original loss function without regularization.
+- $w_i$ are the model coefficients.
+- $n$ is the total number of coefficients.
+- $\lambda$ is the regularization parameter, controlling the strength of regularization.
 
 **Behavior:**
 - L2 regularisation penalizes large coefficients, effectively shrinking them towards zero without forcing them to be exactly zero.
@@ -178,31 +180,30 @@ Data scaling techniques are essential preprocessing steps in machine learning th
 In many machine learning algorithms, features with larger scales or variances can dominate those with smaller scales. This can lead to biased model training and poor performance, especially in algorithms sensitive to feature scales, such as gradient descent-based algorithms. Data scaling helps mitigate these issues by bringing all features to a similar scale or distribution, making the optimization process more effective and improving model performance.
 
 ### Common Data Scaling Techniques
-
 1. **Standardisation:**
    Standardisation scales the features to have a mean of 0 and a standard deviation of 1. It is calculated using the following formula:
 
-   \[
+   $$
    x_{\text{std}} = \frac{x - \mu}{\sigma}
-   \]
+   $$
 
    Where:
-   - \(x\) is the original feature value.
-   - \(\mu\) is the mean of the feature.
-   - \(\sigma\) is the standard deviation of the feature.
+   - $x$ is the original feature value.
+   - $\mu$ is the mean of the feature.
+   - $\sigma$ is the standard deviation of the feature.
 
    Standardisation is robust to outliers and works well for features that follow a Gaussian distribution.
 
 2. **Normalization (Min-Max Scaling):**
    Normalization scales the features to a fixed range, typically between 0 and 1. It is calculated using the following formula:
 
-   \[
+   $$
    x_{\text{norm}} = \frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}
-   \]
+   $$
 
    Where:
-   - \(x_{\text{min}}\) is the minimum value of the feature.
-   - \(x_{\text{max}}\) is the maximum value of the feature.
+   - $x_{\text{min}}$ is the minimum value of the feature.
+   - $x_{\text{max}}$ is the maximum value of the feature.
 
    Normalization preserves the relative relationships between feature values and is suitable for algorithms that require features to be on a similar scale, such as K-nearest neighbors (KNN) and support vector machines (SVM).
 
@@ -257,18 +258,19 @@ Ridge and LASSO regression are popular regularisation techniques used in machine
 Ridge regression adds a penalty term to the ordinary least squares (OLS) loss function, which is proportional to the square of the magnitude of the coefficients. The additional term encourages the model to keep the coefficients small, thus reducing the model's complexity and preventing overfitting.
 
 **Mathematical Representation:**
+
 The loss function for Ridge regression is given by:
 
-\[
+$$
 \text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} w_j^2
-\]
+$$
 
 Where:
-- \(y_i\) is the observed value.
-- \(\hat{y}_i\) is the predicted value.
-- \(w_j\) are the model coefficients.
-- \(p\) is the total number of features.
-- \(\lambda\) is the regularisation parameter, controlling the strength of regularization.
+- $y_i$ is the observed value.
+- $\hat{y}_i$ is the predicted value.
+- $w_j$ are the model coefficients.
+- $p$ is the total number of features.
+- $\lambda$ is the regularization parameter, controlling the strength of regularization.
 
 **Key Points:**
 - Ridge regression shrinks the coefficients towards zero, but they are not exactly zero.
@@ -279,11 +281,12 @@ Where:
 LASSO (Least Absolute Shrinkage and Selection Operator) regression, similar to Ridge regression, adds a penalty term to the OLS loss function. However, in LASSO regression, the penalty term is proportional to the absolute value of the coefficients.
 
 **Mathematical Representation:**
+
 The loss function for LASSO regression is given by:
 
-\[
+$$
 \text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} |w_j|
-\]
+$$
 
 Where the terms have the same meanings as in Ridge regression.
 
