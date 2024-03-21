@@ -252,9 +252,9 @@ In a regression task, where the goal is to predict continuous target variables, 
 ![equation](https://latex.codecogs.com/png.latex?\dpi{300}&space;\bg_white&space;MSE&space;=&space;\frac{1}{n}\sum_{i=1}^{n}(y_i&space;-&space;\hat{y}_i)^2)
 
 Where:
-- \(n\) is the number of samples.
-- \(y_i\) is the actual target value.
-- \(\hat{y_i}\) is the predicted target value.
+- $\(n\)$ is the number of samples.
+- $\(y_i\)$ is the actual target value.
+- $\(\hat{y_i}\)$ is the predicted target value.
 
 Let's demonstrate how to calculate mean squared error using a decision tree regressor:
 
