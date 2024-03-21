@@ -231,7 +231,7 @@ After training a decision tree model, it's essential to evaluate its performance
 
 In a classification task, where the goal is to predict class labels, we commonly use metrics such as accuracy, precision, recall, and F1-score to evaluate the model's performance. Here's how to calculate accuracy:
 
-![equation](https://latex.codecogs.com/png.latex?\dpi{300}&space;\bg_white&space;Accuracy&space;=&space;\frac{Number\ of\ correct\ predictions}{Total\ number\ of\ predictions})
+Accuracy = \(\frac{Number\ of\ correct\ predictions}{Total\ number\ of\ predictions}\)
 
 Let's demonstrate how to calculate accuracy using a decision tree classifier:
 
