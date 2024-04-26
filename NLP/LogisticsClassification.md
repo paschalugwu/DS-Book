@@ -174,8 +174,8 @@ The logistic function, also known as the sigmoid function, is defined as:
 ![\sigma(z) = \frac{1}{1 + e^{-z}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\sigma(z)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-z}})
 
 where:
-- ![ \sigma(z) ](https://latex.codecogs.com/png.latex?\bg_white&space;\sigma(z)) is the output of the logistic function.
-- ![ z ](https://latex.codecogs.com/png.latex?\bg_white&space;z) is the input to the function, which is a linear combination of input features and their corresponding weights.
+- \( \sigma(z) \) is the output of the logistic function.
+- \( z \) is the input to the function, which is a linear combination of input features and their corresponding weights.
 
 #### Logistic Regression Equation
 
