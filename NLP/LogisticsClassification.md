@@ -917,25 +917,25 @@ A confusion matrix is a table that summarizes the performance of a classificatio
 
 Accuracy measures the proportion of correctly predicted instances among all instances.
 
-\[ \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}} \]
+![\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Accuracy}&space;=&space;\frac{\text{TP}&space;&plus;&space;\text{TN}}{\text{TP}&space;&plus;&space;\text{TN}&space;&plus;&space;\text{FP}&space;&plus;&space;\text{FN}})
 
 #### 3. Precision
 
 Precision measures the proportion of correctly predicted positive instances among all instances predicted as positive.
 
-\[ \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \]
+![\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Precision}&space;=&space;\frac{\text{TP}}{\text{TP}&space;&plus;&space;\text{FP}})
 
 #### 4. Recall (Sensitivity)
 
 Recall, also known as sensitivity or true positive rate, measures the proportion of correctly predicted positive instances among all actual positive instances.
 
-\[ \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \]
+![\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Recall}&space;=&space;\frac{\text{TP}}{\text{TP}&space;&plus;&space;\text{FN}})
 
 #### 5. F1-Score
 
 The F1-score is the harmonic mean of precision and recall. It provides a balance between precision and recall.
 
-\[ \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \]
+![\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{F1-Score}&space;=&space;2&space;\times&space;\frac{\text{Precision}&space;\times&space;\text{Recall}}{\text{Precision}&space;+&space;\text{Recall}})
 
 #### Real-World Application
 
