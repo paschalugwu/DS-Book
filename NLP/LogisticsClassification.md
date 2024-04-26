@@ -185,7 +185,7 @@ In logistic regression, we model the probability that an input \( x \) belongs t
 
 where:
 - $\( P(y=1|x) \)$ is the probability that the output \( y \) is 1 given input \( x \).
-- $\( \beta_0, \beta_1, \ldots, \beta_n \)$ are the coefficients (weights) associated with the input features \( x_1, x_2, \ldots, x_n \) respectively.
+- $\( \beta_0, \beta_1, \ldots, \beta_n \)$ are the coefficients (weights) associated with the input features $\( x_1, x_2, \ldots, x_n \)$ respectively.
 
 #### Decision Boundary
 
