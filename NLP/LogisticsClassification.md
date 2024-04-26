@@ -170,11 +170,12 @@ Logistic Regression is a statistical method used for predicting the probability 
 #### Logistic Function
 
 The logistic function, also known as the sigmoid function, is defined as:
-
+$$
 \[ \sigma(z) = \frac{1}{1 + e^{-z}} \]
+$$
 
 where:
-- \( \sigma(z) \) is the output of the logistic function.
+- $\( \sigma(z) \)$ is the output of the logistic function.
 - \( z \) is the input to the function, which is a linear combination of input features and their corresponding weights.
 
 #### Logistic Regression Equation
