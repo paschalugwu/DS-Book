@@ -181,7 +181,7 @@ where:
 
 In logistic regression, we model the probability that an input \( x \) belongs to a particular class \( y \) using the logistic function:
 
-![P(y=1|x) = \frac{1}{1 + e^{-\left(\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n\right)}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;P(y=1|x)&space;=&space;\frac{1}{1&space;+&space;e^{-\left(\beta_0&space;+&space;\beta_1&space;x_1&space;+&space;\beta_2&space;x_2&space;+&space;\ldots&space;+&space;\beta_n&space;x_n\right)}})
+![P(y=1|x) = \frac{1}{1 + e^{-\left(\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n\right)}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;P(y=1|x)&space;=&space;\frac{1}{1&space;+&space;e^{-\left(\beta_0&space;+&space;\beta_1&space;x_1&space;+&space;\beta_2&space;x_2&space;+&space;\ldots&space;+&space;\beta_n&space;x_n\right)}})
 
 where:
 - $\( P(y=1|x) \)$ is the probability that the output \( y \) is 1 given input \( x \).
