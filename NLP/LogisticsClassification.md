@@ -368,31 +368,31 @@ In this section, we'll delve into various binary classification metrics that are
 
 Accuracy is one of the simplest metrics used for evaluating classification models. It measures the ratio of correctly predicted instances to the total number of instances.
 
-\[ \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}} \]
+![\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Accuracy}&space;=&space;\frac{\text{Number&space;of&space;Correct&space;Predictions}}{\text{Total&space;Number&space;of&space;Predictions}})
 
 #### 2. Precision
 
 Precision measures the proportion of correctly predicted positive instances among all instances predicted as positive. It is calculated as:
 
-\[ \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}} \]
+![\text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Precision}&space;=&space;\frac{\text{True&space;Positives}}{\text{True&space;Positives}&space;+&space;\text{False&space;Positives}})
 
 #### 3. Recall (Sensitivity)
 
 Recall, also known as sensitivity or true positive rate, measures the proportion of correctly predicted positive instances among all actual positive instances. It is calculated as:
 
-\[ \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} \]
+![\text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Recall}&space;=&space;\frac{\text{True&space;Positives}}{\text{True&space;Positives}&space;+&space;\text{False&space;Negatives}})
 
 #### 4. F1-Score
 
 The F1-score is the harmonic mean of precision and recall. It provides a balanced measure of a model's performance on both positive and negative classes.
 
-\[ \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \]
+![\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{F1-Score}&space;=&space;2&space;\times&space;\frac{\text{Precision}&space;\times&space;\text{Recall}}{\text{Precision}&space;+&space;\text{Recall}})
 
 #### 5. Specificity
 
 Specificity measures the proportion of correctly predicted negative instances among all actual negative instances. It is calculated as:
 
-\[ \text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}} \]
+![\text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}}](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\text{Specificity}&space;=&space;\frac{\text{True&space;Negatives}}{\text{True&space;Negatives}&space;+&space;\text{False&space;Positives}})
 
 #### Real-World Application
 
