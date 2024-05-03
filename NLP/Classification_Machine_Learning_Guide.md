@@ -255,9 +255,9 @@ Support Vector Machine (SVM) is a powerful supervised learning algorithm used fo
 
 In SVM, the goal is to find the hyperplane that maximizes the margin between different classes. For a binary classification problem with two classes, the hyperplane is defined as:
 
-\[ w^T x + b = 0 \]
+$\[ w^T x + b = 0 \]$
 
-where \( w \) is the normal vector to the hyperplane, \( x \) is the input feature vector, and \( b \) is the bias term.
+where $\( w \)$ is the normal vector to the hyperplane, $\( x \)$ is the input feature vector, and $\( b \)$ is the bias term.
 
 #### 2. **Margins**:
 
@@ -524,18 +524,18 @@ Naive Bayes classifiers are simple yet effective probabilistic classifiers based
 
 Bayes' theorem is a fundamental concept in probability theory that describes the probability of an event based on prior knowledge of conditions that might be related to the event. It is mathematically represented as:
 
-\[ P(A|B) = \frac{P(B|A) \times P(A)}{P(B)} \]
+$\[ P(A|B)$ = $\frac{P(B|A) \times P(A)}{P(B)} \]$
 
 where:
-- \( P(A|B) \) is the posterior probability of event A given event B.
-- \( P(B|A) \) is the likelihood of event B given event A.
-- \( P(A) \) and \( P(B) \) are the prior probabilities of events A and B, respectively.
+- $\( P(A|B) \)$ is the posterior probability of event A given event B.
+- $\( P(B|A) \)$ is the likelihood of event B given event A.
+- $\( P(A) \)$ and $\( P(B) \)$ are the prior probabilities of events A and B, respectively.
 
 2. **Naive Assumption**:
 
 Naive Bayes classifiers assume that the features are conditionally independent given the class label. Mathematically, it means:
 
-\[ P(x_1, x_2, ..., x_n|y) = P(x_1|y) \times P(x_2|y) \times \cdots \times P(x_n|y) \]
+$\[ P(x_1, x_2, ..., x_n|y)$ = $P(x_1|y) \times P(x_2|y) \times \cdots \times P(x_n|y) \]$
 
 This simplifies the computation of the joint probability of features given the class label.
 
@@ -599,12 +599,12 @@ The log loss function, also known as cross-entropy loss, is a common metric used
 
 For a binary classification problem, the log loss function is defined as:
 
-\[ \text{Log Loss} = -\frac{1}{N} \sum_{i=1}^{N} \left( y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right) \]
+$\[ \text{Log Loss}$ = $-\frac{1}{N} \sum_{i=1}^{N} \left( y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right) \]$
 
 where:
-- \( N \) is the number of samples.
-- \( y_i \) is the true label of the \( i \)-th sample (0 or 1).
-- \( p_i \) is the predicted probability of the positive class for the \( i \)-th sample.
+- $\( N \)$ is the number of samples.
+- $\( y_i \)$ is the true label of the $\( i \)-th$ sample (0 or 1).
+- $\( p_i \)$ is the predicted probability of the positive class for the $\( i \)-th$ sample.
 
 For multiclass classification, the formula is extended to account for multiple classes.
 
