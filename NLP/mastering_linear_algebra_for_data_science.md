@@ -11,9 +11,9 @@ In the realm of data science, understanding vector representations is fundamenta
 A vector is a mathematical construct that represents a quantity with both magnitude and direction. In simpler terms, it's an ordered set of numbers. 
 
 For instance, consider a vector **v**:
-$ \mathbf{v} = [v_1, v_2, ..., v_n] $
+ \mathbf{v} = [v_1, v_2, ..., v_n] 
 
-Here, each $ v_i $ represents a component of the vector, and 'n' is the dimension of the vector.
+Here, each  v_i  represents a component of the vector, and 'n' is the dimension of the vector.
 
 ## Vector Representations of Data Objects
 
@@ -82,17 +82,17 @@ Matrix multiplication is a fundamental operation in linear algebra with widespre
 
 ## Basics of Matrix Multiplication
 
-Given two matrices $ A $ and $ B $, their product $ C = AB $ is defined if and only if the number of columns in $ A $ is equal to the number of rows in $ B $. If $ A $ is of dimension $ m \times n $ and $ B $ is of dimension $ n \times p $, then the resulting matrix $ C $ will be of dimension $ m \times p $.
+Given two matrices  A  and  B , their product  C = AB  is defined if and only if the number of columns in  A  is equal to the number of rows in  B . If  A  is of dimension  m \times n  and  B  is of dimension  n \times p , then the resulting matrix  C  will be of dimension  m \times p .
 
 ### Example:
 
 Let's consider two matrices:
 
-$ A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} $ and $ B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} $
+ A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}  and  B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} 
 
-To find the product $ C = AB $, we compute each element of $ C $ as follows:
+To find the product  C = AB , we compute each element of  C  as follows:
 
-$ c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + ... + a_{in}b_{nj} $
+ c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + ... + a_{in}b_{nj} 
 
 ## Real-World Applications
 
@@ -137,11 +137,11 @@ Matrix multiplication is a crucial operation in linear algebra with diverse appl
    - C) The number of columns in the first matrix must equal the number of rows in the second matrix.
    - D) The number of rows in the first matrix must equal the number of columns in the second matrix.
 
-2. If matrix $ A $ has dimensions $ 3 \times 2 $ and matrix $ B $ has dimensions $ 2 \times 4 $, what will be the dimensions of the resulting matrix after multiplication?
-   - A) $ 2 \times 3 $
-   - B) $ 3 \times 4 $
-   - C) $ 4 \times 2 $
-   - D) $ 3 \times 2 $
+2. If matrix  A  has dimensions  3 \times 2  and matrix  B  has dimensions  2 \times 4 , what will be the dimensions of the resulting matrix after multiplication?
+   - A)  2 \times 3 
+   - B)  3 \times 4 
+   - C)  4 \times 2 
+   - D)  3 \times 2 
 
 3. In which field does matrix multiplication find applications in tasks such as scaling, rotation, and filtering of images?
    - A) Image Processing
@@ -167,19 +167,19 @@ Matrix factorization is a powerful technique in linear algebra that decomposes a
 
 ## Understanding Matrix Factorization
 
-Given a matrix $ A $, matrix factorization represents it as the product of two or more matrices. The most common types of matrix factorization include:
+Given a matrix  A , matrix factorization represents it as the product of two or more matrices. The most common types of matrix factorization include:
 
-1. **LU Decomposition**: Decomposing a matrix into the product of a lower triangular matrix ($ L $) and an upper triangular matrix ($ U $).
-   - $ A = LU $
+1. **LU Decomposition**: Decomposing a matrix into the product of a lower triangular matrix ( L ) and an upper triangular matrix ( U ).
+   -  A = LU 
 
-2. **QR Decomposition**: Decomposing a matrix into the product of an orthogonal matrix ($ Q $) and an upper triangular matrix ($ R $).
-   - $ A = QR $
+2. **QR Decomposition**: Decomposing a matrix into the product of an orthogonal matrix ( Q ) and an upper triangular matrix ( R ).
+   -  A = QR 
 
 3. **Eigenvalue Decomposition**: Decomposing a square matrix into the product of its eigenvectors and eigenvalues.
-   - $ A = Q \Lambda Q^{-1} $
+   -  A = Q \Lambda Q^{-1} 
 
-4. **Singular Value Decomposition (SVD)**: Decomposing a matrix into the product of three matrices: a left singular matrix ($ U $), a diagonal matrix of singular values ($ \Sigma $), and a right singular matrix ($ V^T $).
-   - $ A = U \Sigma V^T $
+4. **Singular Value Decomposition (SVD)**: Decomposing a matrix into the product of three matrices: a left singular matrix ( U ), a diagonal matrix of singular values ( \Sigma ), and a right singular matrix ( V^T ).
+   -  A = U \Sigma V^T 
 
 ## Applications in Real-World Projects
 
@@ -255,22 +255,22 @@ Singular Value Decomposition (SVD) is a fundamental concept in linear algebra th
 
 ## Understanding Singular Value Decomposition
 
-Given a matrix $ A $ of dimensions $ m \times n $, SVD represents it as the product of three matrices:
-- A left singular matrix $ U $ of dimensions $ m \times m $,
-- A diagonal matrix of singular values $ \Sigma $ of dimensions $ m \times n $,
-- A right singular matrix $ V^T $ of dimensions $ n \times n $.
+Given a matrix  A  of dimensions  m \times n , SVD represents it as the product of three matrices:
+- A left singular matrix  U  of dimensions  m \times m ,
+- A diagonal matrix of singular values  \Sigma  of dimensions  m \times n ,
+- A right singular matrix  V^T  of dimensions  n \times n .
 
-The SVD equation is given by: $ A = U \Sigma V^T $
+The SVD equation is given by:  A = U \Sigma V^T 
 
 ### Example:
 
-Let's consider a matrix $ A $:
-$ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} $
+Let's consider a matrix  A :
+ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} 
 
-Performing SVD on $ A $, we get:
-$ U = \begin{bmatrix} -0.404 & -0.914 \\ -0.914 & 0.404 \end{bmatrix} $,
-$ \Sigma = \begin{bmatrix} 5.465 & 0 \\ 0 & 0.366 \end{bmatrix} $,
-$ V^T = \begin{bmatrix} -0.576 & -0.817 \\ 0.817 & -0.576 \end{bmatrix} $
+Performing SVD on  A , we get:
+ U = \begin{bmatrix} -0.404 & -0.914 \\ -0.914 & 0.404 \end{bmatrix} ,
+ \Sigma = \begin{bmatrix} 5.465 & 0 \\ 0 & 0.366 \end{bmatrix} ,
+ V^T = \begin{bmatrix} -0.576 & -0.817 \\ 0.817 & -0.576 \end{bmatrix} 
 
 ## Real-World Applications
 
@@ -316,10 +316,10 @@ Singular Value Decomposition (SVD) is a powerful technique in linear algebra for
    - C) Four matrices
    - D) Five matrices
 
-2. In the SVD equation $ A = U \Sigma V^T $, what are the dimensions of matrix $ \Sigma $?
-   - A) $ m \times n $
-   - B) $ n \times n $
-   - C) $ m \times m $
+2. In the SVD equation  A = U \Sigma V^T , what are the dimensions of matrix  \Sigma ?
+   - A)  m \times n 
+   - B)  n \times n 
+   - C)  m \times m 
    - D) It varies depending on the input matrix dimensions.
 
 3. What is the role of Singular Value Decomposition (SVD) in Principal Component Analysis (PCA)?
@@ -609,8 +609,8 @@ Eigenvectors and eigenvalues are fundamental concepts in linear algebra, playing
 ## Understanding Eigenvectors and Eigenvalues
 
 ### Definition:
-Given a square matrix $ A $, an eigenvector $ \mathbf{v} $ and its corresponding eigenvalue $ \lambda $ satisfy the equation:
-$$ A\mathbf{v} = \lambda\mathbf{v} $$
+Given a square matrix  A , an eigenvector  \mathbf{v}  and its corresponding eigenvalue  \lambda  satisfy the equation:
+ A\mathbf{v} = \lambda\mathbf{v} 
 
 ### Significance:
 - **Eigenvectors**: Eigenvectors represent directions within a transformation matrix that remain unchanged or are only scaled during the transformation.
