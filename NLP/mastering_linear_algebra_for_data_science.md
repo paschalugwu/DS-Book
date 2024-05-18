@@ -89,7 +89,7 @@ Given two matrices $\( A \)$ and $\( B \)$, their product $\( C = AB \)$ is defi
 Let's consider two matrices:
 
 \[ 
-A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} 
+A = $\begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \quad \text{and} \quad$ B = $\begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix}$ 
 \]
 
 To find the product $\( C = AB \)$, we compute each element of $\( C \)$ as follows:
