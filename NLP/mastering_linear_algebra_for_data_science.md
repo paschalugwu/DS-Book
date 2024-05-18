@@ -272,9 +272,11 @@ Let's consider a matrix $\( A \)$:
 \[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \]
 
 Performing SVD on \( A \), we get:
+$$
 \[ U = \begin{bmatrix} -0.404 & -0.914 \\ -0.914 & 0.404 \end{bmatrix} \]
 \[ \Sigma = \begin{bmatrix} 5.465 & 0 \\ 0 & 0.366 \end{bmatrix} \]
 \[ V^T = \begin{bmatrix} -0.576 & -0.817 \\ 0.817 & -0.576 \end{bmatrix} \]
+$$
 
 ## Real-World Applications
 
