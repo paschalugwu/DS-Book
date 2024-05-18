@@ -44,7 +44,7 @@ Vector embeddings play a crucial role in capturing the features and relationship
 Understanding vector representations is foundational in data science. It allows us to transform and analyze data efficiently, leading to actionable insights and informed decision-making.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. Which of the following best describes a vector?
    - A) A scalar quantity
@@ -133,7 +133,7 @@ print(C)
 Matrix multiplication is a crucial operation in linear algebra with diverse applications in data science and beyond. Understanding its principles and rules is essential for solving various computational problems efficiently.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. For matrix multiplication to be defined, what condition must be satisfied regarding the dimensions of the matrices involved?
    - A) The number of rows in the first matrix must equal the number of rows in the second matrix.
@@ -221,7 +221,7 @@ print(VT)
 Matrix factorization is a versatile technique used to simplify complex data structures and extract latent features. By decomposing matrices into simpler components, it enables efficient analysis, compression, and prediction in various real-world projects.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What does matrix factorization involve?
    - A) Combining multiple matrices into one
@@ -316,7 +316,7 @@ print(VT)
 Singular Value Decomposition (SVD) is a powerful technique in linear algebra for decomposing matrices into simpler components. Understanding SVD and its applications is essential for various data science tasks, including dimensionality reduction, image compression, and recommendation systems.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What does Singular Value Decomposition (SVD) decompose a matrix into?
    - A) Two matrices
@@ -395,7 +395,7 @@ SVD-based matrix factorization can be leveraged to derive vector embeddings that
 Singular Value Decomposition (SVD) is a powerful tool with diverse applications across various scientific disciplines. Its ability to derive meaningful representations from data makes it indispensable in data science, machine learning, genomics, robotics, and beyond.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. In which application domain is SVD commonly used to reduce the dimensionality of high-dimensional datasets?
    - A) Healthcare
@@ -485,7 +485,7 @@ accuracy.rmse(predictions)
 Matrix factorization techniques play a crucial role in generating vector embeddings that capture latent features within data. By decomposing high-dimensional matrices, we can derive more compact and meaningful representations, enabling tasks like recommendation, classification, and natural language processing.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the primary goal of matrix factorization in generating vector embeddings?
    - A) Increasing data dimensionality
@@ -578,7 +578,7 @@ plt.show()
 Dimensionality reduction techniques play a vital role in simplifying high-dimensional datasets while preserving essential information. By transforming data into a lower-dimensional space, these techniques enable more efficient analysis, visualization, and modeling, leading to better insights and decision-making in various real-world projects.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the primary objective of dimensionality reduction?
    - A) To increase computational complexity
@@ -664,7 +664,7 @@ print(eigenvectors)
 Eigenvectors and eigenvalues are fundamental concepts in linear algebra, providing insights into the behavior of linear transformations and systems of equations. Understanding eigenvectors and eigenvalues is essential for various data science tasks, including dimensionality reduction, image processing, and mechanical engineering.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the significance of eigenvectors in linear algebra?
    - A) They represent stable directions under a transformation
@@ -754,7 +754,7 @@ plt.show()
 Principal Component Analysis (PCA) is a powerful dimensionality reduction technique that identifies the principal components capturing the maximum variance in the data. By selecting a subset of these components, PCA enables effective dimensionality reduction while preserving essential information. Understanding PCA is essential for various data science tasks, including visualization, feature extraction, and data compression.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the primary goal of Principal Component Analysis (PCA)?
    - A) To increase the dimensionality of the data
@@ -835,7 +835,7 @@ print(np.round(ratings_predicted))
 Matrix factorization and Singular Value Decomposition (SVD) are powerful techniques applied in recommendation systems and content filtering. By analyzing latent features within user-movie matrices, these techniques enable accurate prediction of user preferences and behavior, leading to personalized movie recommendations and enhanced user experience.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the objective of applying matrix factorization and SVD to the user-movie matrix?
    - A) To increase the number of ratings
@@ -924,7 +924,7 @@ model.fit(train_images, train_labels, epochs=10, batch_size=32)
 Neural networks offer a powerful framework for obtaining vector embeddings from input data. By learning representations through training, neural networks can capture complex patterns and relationships, enabling a wide range of applications in machine learning and artificial intelligence.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the primary objective of neural networks?
    - A) To perform linear algebra operations
@@ -1004,7 +1004,7 @@ print("Reduced shape:", X_reduced.shape)
 Efficiency and resource management are critical considerations in data science, especially when dealing with large-scale datasets and complex models. By working in smaller dimensional spaces through techniques like $\( \text{PCA} \)$ and $\( \text{SVD} \)$, data scientists can improve computational efficiency, save resources, and reveal relevant structures in the data.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. What is the primary advantage of working in smaller dimensional spaces in data science?
    - A) Increased memory usage
@@ -1069,7 +1069,7 @@ Continuous learning and exploration of linear algebra concepts are crucial for m
 Continuous learning and exploration of linear algebra concepts are essential for mastering data science and machine learning. By leveraging recommended resources and applying knowledge to real-world projects, you can enhance your skills and expertise in this fundamental area of mathematics.
 
 ---
-### End of Chapter/lesson MCQs:
+### End of Chapter MCQs:
 
 1. Which YouTube channel provides intuitive explanations of mathematical concepts, including linear algebra, through engaging animations?
    - A) Khan Academy
