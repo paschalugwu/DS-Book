@@ -617,7 +617,8 @@ Eigenvectors and eigenvalues are fundamental concepts in linear algebra, playing
 
 ### Definition:
 Given a square matrix $\( A \)$, an eigenvector $\( \mathbf{v} \)$ and its corresponding eigenvalue $\( \lambda \)$ satisfy the equation:
-$$ A\mathbf{v} = \lambda\mathbf{v} $$
+
+![Equation](https://latex.codecogs.com/png.latex?\bg_white&space;\dpi{150}&space;A\mathbf{v}&space;=&space;\lambda\mathbf{v})
 
 ### Significance:
 - **Eigenvectors**: Eigenvectors represent directions within a transformation matrix that remain unchanged or are only scaled during the transformation.
