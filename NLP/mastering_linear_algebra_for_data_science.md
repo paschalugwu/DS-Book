@@ -82,21 +82,21 @@ Matrix multiplication is a fundamental operation in linear algebra with widespre
 
 ## Basics of Matrix Multiplication
 
-Given two matrices \( A \) and \( B \), their product \( C = AB \) is defined if and only if the number of columns in \( A \) is equal to the number of rows in \( B \). If \( A \) is of dimension \( m \times n \) and \( B \) is of dimension \( n \times p \), then the resulting matrix \( C \) will be of dimension \( m \times p \).
+Given two matrices $\( A \)$ and $\( B \)$, their product $\( C = AB \)$ is defined if and only if the number of columns in $\( A \)$ is equal to the number of rows in $\( B \)$. If $\( A \)$ is of dimension $\( m \times n \)$ and $\( B \)$ is of dimension $\( n \times p \)$, then the resulting matrix $\( C \)$ will be of dimension $\( m \times p \)$.
 
 ### Example:
 
 Let's consider two matrices:
 
-\[ 
+$\[ 
 A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} 
-\]
+\]$
 
-To find the product \( C = AB \), we compute each element of \( C \) as follows:
+To find the product $\( C = AB \)$, we compute each element of $\( C \)$ as follows:
 
-\[ 
+$\[ 
 c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{in}b_{nj} 
-\]
+\]$
 
 ## Real-World Applications
 
