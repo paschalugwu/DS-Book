@@ -269,7 +269,7 @@ The SVD equation is given by: $\( A = U \Sigma V^T \)$
 ### Example:
 
 Let's consider a matrix $\( A \)$:
-$\[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \]$
+$$\[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \]$$
 
 Performing SVD on $\( A \)$, we get:
 $\[ U = \begin{bmatrix} -0.404 & -0.914 \\ -0.914 & 0.404 \end{bmatrix} \]$
