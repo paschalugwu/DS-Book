@@ -11,7 +11,7 @@ In the realm of data science, understanding vector representations is fundamenta
 A vector is a mathematical construct that represents a quantity with both magnitude and direction. In simpler terms, it's an ordered set of numbers. 
 
 For instance, consider a vector **v**:
-\[ \mathbf{v} = [v_1, v_2, \ldots, v_n] \]
+$\[ \mathbf{v} = [v_1, v_2, \ldots, v_n] \]$
 
 Here, each \( v_i \) represents a component of the vector, and 'n' is the dimension of the vector.
 
