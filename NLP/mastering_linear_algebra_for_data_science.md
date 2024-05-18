@@ -269,12 +269,15 @@ The SVD equation is given by: $\( A = U \Sigma V^T \)$
 ### Example:
 
 Let's consider a matrix $\( A \)$:
-![Matrix A](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;A&space;=&space;\begin{bmatrix}&space;1&space;&&space;2&space;\\&space;3&space;&&space;4&space;\end{bmatrix})
+![A](https://latex.codecogs.com/png.latex?\dpi{150}&space;A&space;=&space;\begin{bmatrix}&space;1&space;&&space;2&space;\\&space;3&space;&&space;4&space;\end{bmatrix})
 
 Performing SVD on \( A \), we get:
-![Matrix U](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;U&space;=&space;\begin{bmatrix}&space;-0.404&space;&&space;-0.914&space;\\&space;-0.914&space;&&space;0.404&space;\end{bmatrix})
-![Matrix Sigma](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\Sigma&space;=&space;\begin{bmatrix}&space;5.465&space;&&space;0&space;\\&space;0&space;&&space;0.366&space;\end{bmatrix})
-![Matrix V Transpose](https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;V^T&space;=&space;\begin{bmatrix}&space;-0.576&space;&&space;-0.817&space;\\&space;0.817&space;&&space;-0.576&space;\end{bmatrix})
+
+![U](https://latex.codecogs.com/png.latex?\dpi{150}&space;U&space;=&space;\begin{bmatrix}&space;-0.404&space;&&space;-0.914&space;\\&space;-0.914&space;&&space;0.404&space;\end{bmatrix})
+
+![Sigma](https://latex.codecogs.com/png.latex?\dpi{150}&space;\Sigma&space;=&space;\begin{bmatrix}&space;5.465&space;&&space;0&space;\\&space;0&space;&&space;0.366&space;\end{bmatrix})
+
+![V^T](https://latex.codecogs.com/png.latex?\dpi{150}&space;V^T&space;=&space;\begin{bmatrix}&space;-0.576&space;&&space;-0.817&space;\\&space;0.817&space;&&space;-0.576&space;\end{bmatrix})
 
 ## Real-World Applications
 
