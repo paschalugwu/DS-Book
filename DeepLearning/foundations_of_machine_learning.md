@@ -297,29 +297,29 @@ print(f"Entropy: {entropy} bits")
 
 Binary cross-entropy is a loss function used in binary classification problems. It measures the performance of a classification model whose output is a probability value between 0 and 1. The binary cross-entropy loss for a single sample is defined as:
 
-\[ \text{BCE}(y, \hat{y}) = -[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})] \]
+$\[ \text{BCE}(y, \hat{y}) = -[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})] \]$
 
 where:
-- \( y \) is the true binary label (0 or 1).
-- \( \hat{y} \) is the predicted probability of the sample being in class 1.
+- $\( y \)$ is the true binary label (0 or 1).
+- $\( \hat{y} \)$ is the predicted probability of the sample being in class 1.
 
-For a dataset of \( N \) samples, the average binary cross-entropy loss is:
+For a dataset of $\( N \)$ samples, the average binary cross-entropy loss is:
 
-\[ \text{BCE}(Y, \hat{Y}) = -\frac{1}{N} \sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]
+$\[ \text{BCE}(Y, \hat{Y}) = -\frac{1}{N} \sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]$
 
 ### Extend to Multi-Class Cross-Entropy for Classification Problems with More than Two Classes
 
-Multi-class cross-entropy is used for classification problems where there are more than two classes. For a sample with \( C \) classes, the multi-class cross-entropy loss is defined as:
+Multi-class cross-entropy is used for classification problems where there are more than two classes. For a sample with $\( C \)$ classes, the multi-class cross-entropy loss is defined as:
 
-\[ \text{CE}(y, \hat{y}) = -\sum_{c=1}^{C} y_c \log(\hat{y}_c) \]
+$\[ \text{CE}(y, \hat{y}) = -\sum_{c=1}^{C} y_c \log(\hat{y}_c) \]$
 
 where:
-- \( y_c \) is a binary indicator (0 or 1) if class label \( c \) is the correct classification for the sample.
-- \( \hat{y}_c \) is the predicted probability of the sample belonging to class \( c \).
+- $\( y_c \)$ is a binary indicator (0 or 1) if class label $\( c \)$ is the correct classification for the sample.
+- $\( \hat{y}_c \)$ is the predicted probability of the sample belonging to class $\( c \)$.
 
-For a dataset of \( N \) samples, the average multi-class cross-entropy loss is:
+For a dataset of $\( N \)$ samples, the average multi-class cross-entropy loss is:
 
-\[ \text{CE}(Y, \hat{Y}) = -\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic}) \]
+$\[ \text{CE}(Y, \hat{Y}) = -\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic}) \]$
 
 ### Understand the Equivalence of Minimizing Cross-Entropy and Maximizing Log-Likelihood
 
@@ -327,15 +327,15 @@ Minimizing the cross-entropy loss is equivalent to maximizing the log-likelihood
 
 In mathematical terms, for a binary classification problem, the likelihood of the observed data can be expressed as:
 
-\[ \mathcal{L}(\hat{y}|y) = \prod_{i=1}^{N} \hat{y}_i^{y_i} (1 - \hat{y}_i)^{1 - y_i} \]
+$\[ \mathcal{L}(\hat{y}|y) = \prod_{i=1}^{N} \hat{y}_i^{y_i} (1 - \hat{y}_i)^{1 - y_i} \]$
 
 Taking the logarithm of the likelihood function gives us the log-likelihood:
 
-\[ \log \mathcal{L}(\hat{y}|y) = \sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]
+$\[ \log \mathcal{L}(\hat{y}|y) = \sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]$
 
 Maximizing this log-likelihood is equivalent to minimizing the negative log-likelihood, which is the binary cross-entropy loss:
 
-\[ -\log \mathcal{L}(\hat{y}|y) = -\sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]
+$\[ -\log \mathcal{L}(\hat{y}|y) = -\sum_{i=1}^{N} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] \]$
 
 ### Example Code Snippet
 
@@ -361,12 +361,12 @@ print(f"Binary Cross-Entropy Loss: {loss.item()}")
 ### Technical End of Chapter MCQs
 
 1. What is the formula for binary cross-entropy for a single sample?
-   - A) \(-[y \log(\hat{y})]\)
-   - B) \(-[(1 - y) \log(1 - \hat{y})]\)
-   - C) \(-[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]\)
-   - D) \(\log(y + \hat{y})\)
+   - A) $\(-[y \log(\hat{y})]\)$
+   - B) $\(-[(1 - y) \log(1 - \hat{y})]\)$
+   - C) $\(-[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]\)$
+   - D) $\(\log(y + \hat{y})\)$
 
-2. In the binary cross-entropy loss formula, what does \( \hat{y} \) represent?
+2. In the binary cross-entropy loss formula, what does $\( \hat{y} \)$ represent?
    - A) The true label.
    - B) The predicted probability.
    - C) The feature value.
