@@ -736,7 +736,7 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
 4. D) By summing the negative logarithms of the predicted probabilities for the true classes.
 5. C) To determine the direction to adjust the weights.
 6. A) To control the step size in updating the model parameters.
-7. B) \( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)
+7. B) $\( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)$
 8. C) The algorithm may overshoot the minimum.
 9. C) Multi-Class Cross-Entropy
 10. B) To ensure the model predictions are as accurate as possible.
@@ -745,34 +745,34 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
 
 ### Understanding the Concept of Gradient Descent
 
-Gradient descent is an optimization algorithm used to minimize an error function \( E(W, b) \) in machine learning models. The goal of gradient descent is to find the set of parameters (weights \( W \) and biases \( b \)) that minimizes the error function, leading to the best model performance.
+Gradient descent is an optimization algorithm used to minimize an error function $\( E(W, b) \)$ in machine learning models. The goal of gradient descent is to find the set of parameters (weights $\( W \)$ and biases $\( b \))$ that minimizes the error function, leading to the best model performance.
 
 #### The Gradient
 
-The gradient is a vector of partial derivatives that indicates the direction of the steepest ascent of a function. For an error function \( E(W, b) \), the gradient with respect to the weights \( W \) and biases \( b \) is given by:
+The gradient is a vector of partial derivatives that indicates the direction of the steepest ascent of a function. For an error function $\( E(W, b) \)$, the gradient with respect to the weights $\( W \)$ and biases $\( b \)$ is given by:
 
-\[ \nabla E(W, b) = \left( \frac{\partial E}{\partial W}, \frac{\partial E}{\partial b} \right) \]
+$\[ \nabla E(W, b) = \left( \frac{\partial E}{\partial W}, \frac{\partial E}{\partial b} \right) \]$
 
-The negative of the gradient, \( -\nabla E(W, b) \), points in the direction of the steepest descent, which is the direction we need to move to reduce the error function.
+The negative of the gradient, $\( -\nabla E(W, b) \)$, points in the direction of the steepest descent, which is the direction we need to move to reduce the error function.
 
 ### The Gradient Descent Algorithm
 
 The gradient descent algorithm involves iteratively updating the model parameters to minimize the error function. The basic steps of gradient descent are:
 
-1. **Initialize** the model parameters (weights \( W \) and biases \( b \)) randomly.
+1. **Initialize** the model parameters (weights $\( W \)$ and biases $\( b \))$ randomly.
 2. **Compute** the predictions using the current parameters.
-3. **Calculate** the error function \( E(W, b) \) based on the current predictions and the true labels.
+3. **Calculate** the error function $\( E(W, b) \)$ based on the current predictions and the true labels.
 4. **Compute** the gradient of the error function with respect to the parameters.
-5. **Update** the parameters using the gradient and a learning rate \( \eta \):
+5. **Update** the parameters using the gradient and a learning rate $\( \eta \)$:
 
-\[ W \leftarrow W - \eta \frac{\partial E}{\partial W} \]
-\[ b \leftarrow b - \eta \frac{\partial E}{\partial b} \]
+$\[ W \leftarrow W - \eta \frac{\partial E}{\partial W} \]$
+$\[ b \leftarrow b - \eta \frac{\partial E}{\partial b} \]$
 
 6. **Repeat** steps 2-5 until convergence (i.e., the error function reaches a minimum or changes very little).
 
 ### Adjusting Weights to Reduce the Error Function
 
-The key idea of gradient descent is to adjust the model parameters (weights and biases) iteratively in small steps to reduce the error function. The size of these steps is determined by the learning rate \( \eta \). A smaller learning rate means smaller steps and more iterations, while a larger learning rate means larger steps and fewer iterations.
+The key idea of gradient descent is to adjust the model parameters (weights and biases) iteratively in small steps to reduce the error function. The size of these steps is determined by the learning rate $\( \eta \)$. A smaller learning rate means smaller steps and more iterations, while a larger learning rate means larger steps and fewer iterations.
 
 ### Example Code Snippet
 
@@ -832,29 +832,29 @@ print(f"Final weights: {W}, Final bias: {b}")
    - C) The error of the model.
    - D) The learning rate of the model.
 
-3. In the gradient descent update rule \( W \leftarrow W - \eta \frac{\partial E}{\partial W} \), what does \( \eta \) represent?
+3. In the gradient descent update rule $\( W \leftarrow W - \eta \frac{\partial E}{\partial W} \)$, what does $\( \eta \)$ represent?
    - A) The gradient.
    - B) The error function.
    - C) The learning rate.
    - D) The weight.
 
-4. What happens if the learning rate \( \eta \) is too high during gradient descent?
+4. What happens if the learning rate $\( \eta \)$ is too high during gradient descent?
    - A) The algorithm converges quickly.
    - B) The algorithm may overshoot the minimum.
    - C) The error function increases.
    - D) The weights do not get updated.
 
-5. How is the error function \( E(W, b) \) typically minimized in gradient descent?
+5. How is the error function $\( E(W, b) \)$ typically minimized in gradient descent?
    - A) By increasing the learning rate.
    - B) By moving in the direction of the negative gradient.
    - C) By initializing the weights randomly.
    - D) By calculating the Hessian matrix.
 
-6. Which of the following represents the update rule for the bias \( b \) in gradient descent?
-   - A) \( b \leftarrow b + \eta \frac{\partial E}{\partial b} \)
-   - B) \( b \leftarrow b - \eta \frac{\partial E}{\partial b} \)
-   - C) \( b \leftarrow b - \eta \frac{\partial E}{\partial W} \)
-   - D) \( b \leftarrow b + \eta \frac{\partial E}{\partial W} \)
+6. Which of the following represents the update rule for the bias $\( b \)$ in gradient descent?
+   - A) $\( b \leftarrow b + \eta \frac{\partial E}{\partial b} \)$
+   - B) $\( b \leftarrow b - \eta \frac{\partial E}{\partial b} \)$
+   - C) $\( b \leftarrow b - \eta \frac{\partial E}{\partial W} \)$
+   - D) $\( b \leftarrow b + \eta \frac{\partial E}{\partial W} \)$
 
 7. What is the role of the error function in model training?
    - A) To initialize the weights and biases.
@@ -887,7 +887,7 @@ print(f"Final weights: {W}, Final bias: {b}")
 3. C) The learning rate.
 4. B) The algorithm may overshoot the minimum.
 5. B) By moving in the direction of the negative gradient.
-6. B) \( b \leftarrow b - \eta \frac{\partial E}{\partial b} \)
+6. B) $\( b \leftarrow b - \eta \frac{\partial E}{\partial b} \)$
 7. B) To measure how well the model's predictions match the actual data.
 8. B) To ensure the model predictions are as accurate as possible.
 9. B) Slower convergence and smaller steps towards the minimum.
@@ -899,15 +899,15 @@ print(f"Final weights: {W}, Final bias: {b}")
 In machine learning, the perceptron model is a type of binary classifier used to classify data points into two categories. It's a fundamental concept that forms the basis for more complex neural network architectures. Understanding the perceptron model is crucial for tackling various classification tasks in data science.
 
 ### Perceptron Model
-The perceptron model is based on the concept of a single artificial neuron. Given a set of input features, \(x_1, x_2, ..., x_n\), each with corresponding weights, \(w_1, w_2, ..., w_n\), the perceptron calculates the weighted sum of inputs and applies a step function to produce an output.
+The perceptron model is based on the concept of a single artificial neuron. Given a set of input features, $\(x_1, x_2, ..., x_n\)$, each with corresponding weights, $\(w_1, w_2, ..., w_n\)$, the perceptron calculates the weighted sum of inputs and applies a step function to produce an output.
 
 The weighted sum, also known as the net input, is represented mathematically as:
 
-\[ z = w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n \]
+$\[ z = w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n \]$
 
-The output, \(y\), is determined by applying the step function (usually a threshold function) to the net input:
+The output, $\(y\)$, is determined by applying the step function (usually a threshold function) to the net input:
 
-\[ y = \begin{cases} 1 & \text{if } z \geq \text{threshold} \\ 0 & \text{otherwise} \end{cases} \]
+$\[ y = \begin{cases} 1 & \text{if } z \geq \text{threshold} \\ 0 & \text{otherwise} \end{cases} \]$
 
 ### Binary Classification with Perceptron
 In binary classification tasks, the perceptron model learns to classify input data points into one of two classes (e.g., positive or negative, spam or not spam). To achieve this, the perceptron adjusts its weights based on the training data until it can accurately separate the classes.
@@ -915,9 +915,9 @@ In binary classification tasks, the perceptron model learns to classify input da
 #### Representation of Linear Equation
 The decision boundary of a perceptron can be represented by a linear equation in the form:
 
-\[ w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n + b = 0 \]
+$\[ w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n + b = 0 \]$
 
-Where \(b\) is the bias term.
+Where $\(b\)$ is the bias term.
 
 ### Example Code Snippet
 Let's illustrate how to implement a simple perceptron model for binary classification using Python and NumPy:
@@ -968,11 +968,11 @@ The perceptron model has various real-world applications, including:
    - **Answer: B) By applying a step function to the net input**
 
 3. What is the formula for the net input in a perceptron?
-   - A) \( z = \sum_{i=1}^{n} w_i \times x_i \)
-   - B) \( z = \sum_{i=1}^{n} (w_i \times x_i) + b \)
-   - C) \( z = \prod_{i=1}^{n} (w_i \times x_i) + b \)
-   - D) \( z = \frac{1}{n} \sum_{i=1}^{n} (w_i \times x_i) \)
-   - **Answer: B) \( z = \sum_{i=1}^{n} (w_i \times x_i) + b \)**
+   - A) $\( z = \sum_{i=1}^{n} w_i \times x_i \)$
+   - B) $\( z = \sum_{i=1}^{n} (w_i \times x_i) + b \)$
+   - C) $\( z = \prod_{i=1}^{n} (w_i \times x_i) + b \)$
+   - D) $\( z = \frac{1}{n} \sum_{i=1}^{n} (w_i \times x_i) \)$
+   - **Answer: B) $\( z = \sum_{i=1}^{n} (w_i \times x_i) + b \)$**
 
 4. What does the bias term represent in a perceptron?
    - A) It represents the net input
@@ -1146,15 +1146,15 @@ Forward propagation is the process by which input data is passed through a neura
 3. **Output Layer**: The output layer generates the final predictions based on the activations of the neurons in the last hidden layer.
 
 ### Mathematical Representation
-Let \( x^{(l)} \) denote the input to layer \( l \), \( w^{(l)} \) denote the weights of layer \( l \), \( b^{(l)} \) denote the biases of layer \( l \), and \( f^{(l)} \) denote the activation function of layer \( l \).
+Let $\( x^{(l)} \)$ denote the input to layer $\( l \)$, $\( w^{(l)} \)$ denote the weights of layer $\( l \)$, $\( b^{(l)} \)$ denote the biases of layer $\( l \)$, and $\( f^{(l)} \)$ denote the activation function of layer $\( l \)$.
 
-The output of a neuron in layer \( l \) can be calculated as:
-\[ z^{(l)} = w^{(l)} \cdot x^{(l)} + b^{(l)} \]
-\[ a^{(l)} = f^{(l)}(z^{(l)}) \]
+The output of a neuron in layer $\( l \)$ can be calculated as:
+$\[ z^{(l)} = w^{(l)} \cdot x^{(l)} + b^{(l)} \]$
+$\[ a^{(l)} = f^{(l)}(z^{(l)}) \]$
 
 Where:
-- \( z^{(l)} \) is the net input.
-- \( a^{(l)} \) is the activation of the neuron.
+- $\( z^{(l)} \)$ is the net input.
+- $\( a^{(l)} \)$ is the activation of the neuron.
 
 ### Example Code Snippet
 Let's illustrate forward propagation in a neural network using Python:
@@ -1203,14 +1203,14 @@ Forward propagation is a crucial step in various real-world applications, such a
    - D) To regularize the network
    - **Answer: C) To generate predictions based on input data**
 
-2. What does \( z^{(l)} \) represent in the mathematical representation of forward propagation?
+2. What does $\( z^{(l)} \)$ represent in the mathematical representation of forward propagation?
    - A) The activation of the neuron
    - B) The net input to the neuron
    - C) The output of the neuron
    - D) The weight of the neuron
    - **Answer: B) The net input to the neuron**
 
-3. What is the role of the activation function \( f^{(l)} \) in forward propagation?
+3. What is the role of the activation function $\( f^{(l)} \)$ in forward propagation?
    - A) To compute the weighted sum of inputs
    - B) To regularize the network
    - C) To initialize the weights and biases
@@ -1275,14 +1275,15 @@ Backpropagation is a crucial algorithm for training neural networks. It enables 
 Backpropagation involves two main steps: forward pass and backward pass. During the forward pass, input data is passed through the network to generate predictions. During the backward pass, the error between the predicted and true values is propagated backward through the network, and the gradients of the loss function with respect to the weights are computed. These gradients are then used to update the weights using an optimization algorithm such as gradient descent.
 
 ### Mathematical Representation
-Let \( L \) denote the loss function, \( w_{ij}^{(l)} \) denote the weight connecting neuron \( i \) in layer \( l-1 \) to neuron \( j \) in layer \( l \), and \( a_i^{(l)} \) denote the activation of neuron \( i \) in layer \( l \).
+Let $\( L \)$ denote the loss function, $\( w_{ij}^{(l)} \)$ denote the weight connecting neuron $\( i \)$ in layer $\( l-1 \)$ to neuron $\( j \)$ in layer $\( l \)$, and $\( a_i^{(l)} \)$ denote the activation of neuron $\( i \)$ in layer $\( l \)$.
 
-The gradient of the loss function with respect to a weight \( w_{ij}^{(l)} \) is given by:
-\[ \frac{\partial L}{\partial w_{ij}^{(l)}} = \frac{\partial L}{\partial z_j^{(l)}} \cdot \frac{\partial z_j^{(l)}}{\partial w_{ij}^{(l)}} = \delta_j^{(l)} \cdot a_i^{(l-1)} \]
+The gradient of the loss function with respect to a weight $\( w_{ij}^{(l)} \)$ is given by:
+
+$\[ \frac{\partial L}{\partial w_{ij}^{(l)}} = \frac{\partial L}{\partial z_j^{(l)}} \cdot \frac{\partial z_j^{(l)}}{\partial w_{ij}^{(l)}} = \delta_j^{(l)} \cdot a_i^{(l-1)} \]$
 
 Where:
-- \( \delta_j^{(l)} \) is the error term of neuron \( j \) in layer \( l \), defined as:
-  \[ \delta_j^{(l)} = \frac{\partial L}{\partial z_j^{(l)}} = \frac{\partial L}{\partial a_j^{(l)}} \cdot \frac{\partial a_j^{(l)}}{\partial z_j^{(l)}} \]
+- $\( \delta_j^{(l)} \)$ is the error term of neuron $\( j \)$ in layer $\( l \)$, defined as:
+  $\[ \delta_j^{(l)} = \frac{\partial L}{\partial z_j^{(l)}} = \frac{\partial L}{\partial a_j^{(l)}} \cdot \frac{\partial a_j^{(l)}}{\partial z_j^{(l)}} \]$
 
 ### Example Code Snippet
 Let's implement backpropagation to train a simple neural network using Python and NumPy:
