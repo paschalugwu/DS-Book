@@ -538,17 +538,19 @@ print("Estimated coefficients:", theta)
 5. For a mean squared error (MSE) loss function, what is the gradient with respect to a weight $\( w_j \)$?
 
 \documentclass{standalone}
-\usepackage{xcolor}
 \usepackage{amsmath}
 
 \begin{document}
-\begin{itemize}
-    \item A) \( \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) \)
-    \item B) \( -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) \)
-    \item C) \( \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \)
-    \item D) \( -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \)
-\end{itemize}
+\(
+\begin{aligned}
+    & \text{A) } \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) \\
+    & \text{B) } -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) \\
+    & \text{C) } \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \\
+    & \text{D) } -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}
+\end{aligned}
+\)
 \end{document}
+
 
 6. In gradient descent, what is the purpose of the gradient?
    - A) To initialize the weights.
