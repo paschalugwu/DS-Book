@@ -731,9 +731,7 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
 ### Answers
 
 1. B) To measure how well the model's predictions match the actual data.
-2. B) $\( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\
-
-hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)$
+2. B) $\( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)$
 3. B) The loss when the prediction is correct.
 4. D) By summing the negative logarithms of the predicted probabilities for the true classes.
 5. C) To determine the direction to adjust the weights.
