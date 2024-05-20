@@ -439,42 +439,42 @@ print(f"Binary Cross-Entropy Loss: {loss.item()}")
 
 Gradient descent is an optimization algorithm used to minimize the error function of a model. The basic idea is to iteratively adjust the model parameters (weights and biases) to find the minimum value of the error function.
 
-For a given error function \( E(\mathbf{w}) \), where \( \mathbf{w} \) represents the weights of the model, the gradient descent update rule is:
+For a given error function $\( E(\mathbf{w}) \), where \( \mathbf{w} \)$ represents the weights of the model, the gradient descent update rule is:
 
-\[ \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \]
+$\[ \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \]$
 
 where:
-- \( \eta \) is the learning rate, a hyperparameter that controls the step size.
-- \( \nabla E(\mathbf{w}) \) is the gradient of the error function with respect to the weights.
+- $\( \eta \)$ is the learning rate, a hyperparameter that controls the step size.
+- $\( \nabla E(\mathbf{w}) \)$ is the gradient of the error function with respect to the weights.
 
 ### Learn to Calculate the Gradient of an Error Function
 
-The gradient of an error function \( E(\mathbf{w}) \) with respect to the weights \( \mathbf{w} \) is a vector of partial derivatives:
+The gradient of an error function $\( E(\mathbf{w}) \)$ with respect to the weights $\( \mathbf{w} \)$ is a vector of partial derivatives:
 
-\[ \nabla E(\mathbf{w}) = \left( \frac{\partial E}{\partial w_1}, \frac{\partial E}{\partial w_2}, \ldots, \frac{\partial E}{\partial w_n} \right) \]
+$\[ \nabla E(\mathbf{w}) = \left( \frac{\partial E}{\partial w_1}, \frac{\partial E}{\partial w_2}, \ldots, \frac{\partial E}{\partial w_n} \right) \]$
 
 For example, if the error function is the mean squared error (MSE):
 
-\[ E(\mathbf{w}) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \]
+$\[ E(\mathbf{w}) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \]$
 
-where \( y_i \) is the true value and \( \hat{y}_i \) is the predicted value, the gradient with respect to a weight \( w_j \) is:
+where $\( y_i \)$ is the true value and $\( \hat{y}_i \)$ is the predicted value, the gradient with respect to a weight $\( w_j \)$ is:
 
-\[ \frac{\partial E}{\partial w_j} = -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \]
+$\[ \frac{\partial E}{\partial w_j} = -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \]$
 
-where \( x_{ij} \) is the \( j \)-th feature of the \( i \)-th sample.
+where $\( x_{ij} \)$ is the $\( j \)-th$ feature of the $\( i \)-th$ sample.
 
 ### Implement Gradient Descent Steps to Iteratively Minimize the Error Function
 
 To implement gradient descent, follow these steps:
-1. Initialize the weights \( \mathbf{w} \) randomly.
-2. Calculate the error function \( E(\mathbf{w}) \).
-3. Compute the gradient \( \nabla E(\mathbf{w}) \).
-4. Update the weights using the gradient descent rule: \( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \).
+1. Initialize the weights $\( \mathbf{w} \)$ randomly.
+2. Calculate the error function $\( E(\mathbf{w}) \)$.
+3. Compute the gradient $\( \nabla E(\mathbf{w}) \)$.
+4. Update the weights using the gradient descent rule: $\( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)$.
 5. Repeat steps 2-4 until convergence (i.e., until the error function reaches a minimum or the changes in weights become very small).
 
 ### Adjust Weights and Biases Using Learning Rates to Improve Model Predictions
 
-The learning rate \( \eta \) is crucial for the performance of gradient descent. A learning rate that is too high can cause the algorithm to overshoot the minimum, while a learning rate that is too low can make the convergence process very slow.
+The learning rate $\( \eta \)$ is crucial for the performance of gradient descent. A learning rate that is too high can cause the algorithm to overshoot the minimum, while a learning rate that is too low can make the convergence process very slow.
 
 ### Example Code Snippet
 
@@ -517,13 +517,13 @@ print("Estimated coefficients:", theta)
    - C) To initialize the weights.
    - D) To calculate the error function.
 
-2. In the gradient descent update rule \( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \), what does \( \eta \) represent?
+2. In the gradient descent update rule $\( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)$, what does $\( \eta \)$ represent?
    - A) The number of iterations.
    - B) The learning rate.
    - C) The gradient.
    - D) The error function.
 
-3. What does \( \nabla E(\mathbf{w}) \) represent in gradient descent?
+3. What does $\( \nabla E(\mathbf{w}) \)$ represent in gradient descent?
    - A) The learning rate.
    - B) The update rule.
    - C) The gradient of the error function with respect to the weights.
@@ -535,11 +535,11 @@ print("Estimated coefficients:", theta)
    - C) The algorithm may not update the weights.
    - D) The error function will not be calculated.
 
-5. For a mean squared error (MSE) loss function, what is the gradient with respect to a weight \( w_j \)?
-   - A) \(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)
-   - B) \(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)
-   - C) \(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)
-   - D) \(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)
+5. For a mean squared error (MSE) loss function, what is the gradient with respect to a weight $\( w_j \)$?
+   - A) $\(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
+   - B) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
+   - C) $\(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)$
+   - D) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)$
 
 6. In gradient descent, what is the purpose of the gradient?
    - A) To initialize the weights.
@@ -577,7 +577,7 @@ print("Estimated coefficients:", theta)
 2. B) The learning rate.
 3. C) The gradient of the error function with respect to the weights.
 4. B) The algorithm may overshoot the minimum.
-5. D) \(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)
+5. D) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)$
 6. B) To determine the direction to adjust the weights.
 7. C) When the changes in weights become very small.
 8. B) To allow the model to fit the data more accurately.
@@ -588,30 +588,30 @@ print("Estimated coefficients:", theta)
 
 ### Derive the Error Function for Binary Classification Using Negative Logarithms of Predicted Probabilities
 
-In binary classification, we want to predict a binary outcome (0 or 1). Let's denote the true label by \( y \) and the predicted probability of the positive class (1) by \( \hat{y} \).
+In binary classification, we want to predict a binary outcome (0 or 1). Let's denote the true label by $\( y \)$ and the predicted probability of the positive class (1) by $\( \hat{y} \)$.
 
 The error function, or loss function, measures how well our model's predictions match the actual data. One common loss function for binary classification is the binary cross-entropy loss, also known as the log loss. The binary cross-entropy loss for a single instance is given by:
 
-\[ L(y, \hat{y}) = -y \log(\hat{y}) - (1 - y) \log(1 - \hat{y}) \]
+$\[ L(y, \hat{y}) = -y \log(\hat{y}) - (1 - y) \log(1 - \hat{y}) \]$
 
-- When \( y = 1 \): \( L(1, \hat{y}) = -\log(\hat{y}) \)
-- When \( y = 0 \): \( L(0, \hat{y}) = -\log(1 - \hat{y}) \)
+- When $\( y = 1 \): \( L(1, \hat{y}) = -\log(\hat{y}) \)$
+- When $\( y = 0 \): \( L(0, \hat{y}) = -\log(1 - \hat{y}) \)$
 
 The overall loss for the entire dataset, with \( N \) instances, is the average of the individual losses:
 
-\[ L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \]
+$\[ L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \]$
 
 ### Generalize the Error Function to Multi-Class Classification Using Multi-Class Cross-Entropy
 
-For multi-class classification, where there are more than two classes, the cross-entropy loss can be extended. Let \( y_i \) be a one-hot encoded vector representing the true class label for the \( i \)-th instance, and \( \hat{y}_i \) be the predicted probability vector for the \( i \)-th instance. The multi-class cross-entropy loss for a single instance is given by:
+For multi-class classification, where there are more than two classes, the cross-entropy loss can be extended. Let $\( y_i \)$ be a one-hot encoded vector representing the true class label for the $\( i \)-th$ instance, and $\( \hat{y}_i \)$ be the predicted probability vector for the $\( i \)-th$ instance. The multi-class cross-entropy loss for a single instance is given by:
 
-\[ L(y_i, \hat{y}_i) = - \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij}) \]
+$\[ L(y_i, \hat{y}_i) = - \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij}) \]$
 
-where \( C \) is the number of classes, \( y_{ij} \) is 1 if the \( i \)-th instance belongs to class \( j \) and 0 otherwise, and \( \hat{y}_{ij} \) is the predicted probability of the \( i \)-th instance belonging to class \( j \).
+where $\( C \)$ is the number of classes, $\( y_{ij} \)$ is 1 if the $\( i \)-th$ instance belongs to class $\( j \)$ and 0 otherwise, and $\( \hat{y}_{ij} \)$ is the predicted probability of the $\( i \)-th$ instance belonging to class $\( j \)$.
 
-The overall loss for the entire dataset, with \( N \) instances, is the average of the individual losses:
+The overall loss for the entire dataset, with $\( N \)$ instances, is the average of the individual losses:
 
-\[ L = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij}) \]
+$\[ L = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij}) \]$
 
 ### Develop an Understanding of How Error Functions Are Used to Train Models by Minimizing Prediction Errors
 
@@ -675,12 +675,12 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
    - D) To determine the learning rate.
 
 2. Which of the following is the formula for binary cross-entropy loss?
-   - A) \( L = -\sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \)
-   - B) \( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)
-   - C) \( L = \sum_{i=1}^{N} \left| y_i - \hat{y}_i \right| \)
-   - D) \( L = \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \)
+   - A) $\( L = -\sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \)$
+   - B) $\( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)$
+   - C) $\( L = \sum_{i=1}^{N} \left| y_i - \hat{y}_i \right| \)$
+   - D) $\( L = \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \)$
 
-3. In binary cross-entropy loss, what does \( -\log(\hat{y}) \) represent when \( y = 1 \)?
+3. In binary cross-entropy loss, what does $\( -\log(\hat{y}) \)$ represent when $\( y = 1 \)$?
    - A) The loss when the prediction is incorrect.
    - B) The loss when the prediction is correct.
    - C) The overall loss for the dataset.
@@ -705,10 +705,10 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
    - D) To calculate the gradient.
 
 7. Which of the following represents the gradient descent update rule?
-   - A) \( \mathbf{w} \leftarrow \mathbf{w} + \eta \nabla E(\mathbf{w}) \)
-   - B) \( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)
-   - C) \( \mathbf{w} \leftarrow \mathbf{w} - \eta E(\mathbf{w}) \)
-   - D) \( \mathbf{w} \leftarrow \mathbf{w} + \eta E(\mathbf{w}) \)
+   - A) $\( \mathbf{w} \leftarrow \mathbf{w} + \eta \nabla E(\mathbf{w}) \)$
+   - B) $\( \mathbf{w} \leftarrow \mathbf{w} - \eta \nabla E(\mathbf{w}) \)$
+   - C) $\( \mathbf{w} \leftarrow \mathbf{w} - \eta E(\mathbf{w}) \)$
+   - D) $\( \mathbf{w} \leftarrow \mathbf{w} + \eta E(\mathbf{w}) \)$
 
 8. What happens if the learning rate is too high during gradient descent?
    - A) The algorithm converges slowly.
@@ -731,9 +731,9 @@ print(f"Multi-Class Cross-Entropy Loss: {loss}")
 ### Answers
 
 1. B) To measure how well the model's predictions match the actual data.
-2. B) \( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\
+2. B) $\( L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\
 
-hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)
+hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] \)$
 3. B) The loss when the prediction is correct.
 4. D) By summing the negative logarithms of the predicted probabilities for the true classes.
 5. C) To determine the direction to adjust the weights.
