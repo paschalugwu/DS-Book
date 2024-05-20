@@ -372,22 +372,22 @@ print(f"Binary Cross-Entropy Loss: {loss.item()}")
    - C) The feature value.
    - D) The loss value.
 
-3. How is the average binary cross-entropy loss for a dataset of \( N \) samples calculated?
-   - A) By summing the binary cross-entropy for all samples and dividing by \( N \).
+3. How is the average binary cross-entropy loss for a dataset of $\( N \)$ samples calculated?
+   - A) By summing the binary cross-entropy for all samples and dividing by $\( N \)$.
    - B) By multiplying the binary cross-entropy for all samples.
    - C) By finding the maximum binary cross-entropy among all samples.
    - D) By finding the minimum binary cross-entropy among all samples.
 
 4. What is the formula for multi-class cross-entropy for a single sample?
-   - A) \(-\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)
-   - B) \(\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)
-   - C) \(-\sum_{c=1}^{C} y \log(\hat{y})\)
-   - D) \(-\sum_{c=1}^{N} y \log(\hat{y})\)
+   - A) $\(-\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)$
+   - B) $\(\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)$
+   - C) $\(-\sum_{c=1}^{C} y \log(\hat{y})\)$
+   - D) $\(-\sum_{c=1}^{N} y \log(\hat{y})\)$
 
-5. In multi-class cross-entropy, what does \( y_c \) indicate?
-   - A) The probability of class \( c \).
-   - B) The binary indicator if class \( c \) is the correct classification.
-   - C) The predicted probability of class \( c \).
+5. In multi-class cross-entropy, what does $\( y_c \)$ indicate?
+   - A) The probability of class $\( c \)$.
+   - B) The binary indicator if class $\( c \)$ is the correct classification.
+   - C) The predicted probability of class $\( c \)$.
    - D) The total number of classes.
 
 6. What is the relationship between minimizing cross-entropy loss and log-likelihood?
@@ -396,11 +396,11 @@ print(f"Binary Cross-Entropy Loss: {loss.item()}")
    - C) They are unrelated.
    - D) Minimizing cross-entropy loss minimizes log-likelihood.
 
-7. For a dataset of \( N \) samples with \( C \) classes, how is the average multi-class cross-entropy loss calculated?
-   - A) \(\sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)
-   - B) \(\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)
-   - C) \(\sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(y_{ic})\)
-   - D) \(\frac{1}{C} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)
+7. For a dataset of $\( N \)$ samples with $\( C \)$ classes, how is the average multi-class cross-entropy loss calculated?
+   - A) $\(\sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)$
+   - B) $\(\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)$
+   - C) $\(\sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(y_{ic})\)$
+   - D) $\(\frac{1}{C} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)$
 
 8. What type of classification problem is binary cross-entropy used for?
    - A) Multi-class classification.
@@ -422,13 +422,13 @@ print(f"Binary Cross-Entropy Loss: {loss.item()}")
 
 ### Answers
 
-1. C) \(-[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]\)
+1. C) $\(-[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]\)$
 2. B) The predicted probability.
-3. A) By summing the binary cross-entropy for all samples and dividing by \( N \).
-4. A) \(-\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)
-5. B) The binary indicator if class \( c \) is the correct classification.
+3. A) By summing the binary cross-entropy for all samples and dividing by $\( N \)$.
+4. A) $\(-\sum_{c=1}^{C} y_c \log(\hat{y}_c)\)$
+5. B) The binary indicator if class $\( c \)$ is the correct classification.
 6. B) Minimizing cross-entropy loss maximizes log-likelihood.
-7. B) \(\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)
+7. B) $\(\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{ic} \log(\hat{y}_{ic})\)$
 8. C) Binary classification.
 9. C) Classifying images into more than two categories.
 10. B) It penalizes incorrect classifications more heavily.
