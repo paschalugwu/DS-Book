@@ -539,7 +539,6 @@ print("Estimated coefficients:", theta)
    - A) $\(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
    - B) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
    - C)
-
 ![\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;\frac{1}{N}&space;\sum_{i=1}^{N}&space;(y_i&space;-&space;\hat{y}_i)&space;x_{ij})
 
    - D)
