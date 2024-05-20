@@ -459,7 +459,9 @@ $\[ E(\mathbf{w}) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \]$
 
 where $\( y_i \)$ is the true value and $\( \hat{y}_i \)$ is the predicted value, the gradient with respect to a weight $\( w_j \)$ is:
 
+
 $$\[ \frac{\partial E}{\partial w_j} = -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \]$$
+
 
 where $\( x_{ij} \)$ is the $\( j \)-th$ feature of the $\( i \)-th$ sample.
 
