@@ -10,7 +10,7 @@ Maximum likelihood is a statistical method used for estimating the parameters of
 
 Mathematically, if we have a set of observations $X = \{x_1, x_2, \ldots, x_n\}$ and a model with parameters $\theta$, the likelihood function $L(\theta)$ is given by:
 
-\[ L(\theta) = P(X|\theta) = \prod_{i=1}^{n} P(x_i|\theta) \]
+$\[ L(\theta) = P(X|\theta) = \prod_{i=1}^{n} P(x_i|\theta) \]$
 
 The goal is to find the parameter values $\theta$ that maximize $L(\theta)$. Instead of maximizing the likelihood directly, it is often easier to maximize the natural logarithm of the likelihood function, known as the log-likelihood function $\ell(\theta)$:
 
