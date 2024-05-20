@@ -14,7 +14,7 @@ Mathematically, if we have a set of observations $X = \{x_1, x_2, \ldots, x_n\}$
 
 The goal is to find the parameter values $\theta$ that maximize $L(\theta)$. Instead of maximizing the likelihood directly, it is often easier to maximize the natural logarithm of the likelihood function, known as the log-likelihood function $\ell(\theta)$:
 
-\[ \ell(\theta) = \log L(\theta) = \sum_{i=1}^{n} \log P(x_i|\theta) \]
+$\[ \ell(\theta) = \log L(\theta) = \sum_{i=1}^{n} \log P(x_i|\theta) \]$
 
 ### Applying Maximum Likelihood in Model Selection
 
@@ -32,25 +32,25 @@ Suppose we have a set of data points $\{x_1, x_2, \ldots, x_n\}$ drawn from a no
 
 1. **Specify the Model**: The probability density function of the normal distribution is:
 
-\[ f(x|\mu) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x - \mu)^2}{2\sigma^2} \right) \]
+$\[ f(x|\mu) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x - \mu)^2}{2\sigma^2} \right) \]$
 
 2. **Write the Likelihood Function**: The likelihood function for the data is:
 
-\[ L(\mu) = \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) \]
+$\[ L(\mu) = \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) \]$
 
 3. **Maximize the Likelihood**: Take the natural logarithm of the likelihood function to get the log-likelihood function:
 
-\[ \ell(\mu) = \log L(\mu) = \sum_{i=1}^{n} \log \left( \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) \right) \]
+$\[ \ell(\mu) = \log L(\mu) = \sum_{i=1}^{n} \log \left( \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) \right) \]$
 
-\[ \ell(\mu) = -\frac{n}{2} \log (2\pi\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2 \]
+$\[ \ell(\mu) = -\frac{n}{2} \log (2\pi\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2 \]$
 
 To find the maximum likelihood estimate of $\mu$, take the derivative of $\ell(\mu)$ with respect to $\mu$ and set it to zero:
 
-\[ \frac{\partial \ell(\mu)}{\partial \mu} = -\frac{1}{\sigma^2} \sum_{i=1}^{n} (x_i - \mu) = 0 \]
+$\[ \frac{\partial \ell(\mu)}{\partial \mu} = -\frac{1}{\sigma^2} \sum_{i=1}^{n} (x_i - \mu) = 0 \]$
 
 Solving for $\mu$ gives:
 
-\[ \hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} x_i \]
+$\[ \hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} x_i \]$
 
 This is the sample mean, which is the maximum likelihood estimate of the population mean $\mu$.
 
