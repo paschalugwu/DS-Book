@@ -538,8 +538,12 @@ print("Estimated coefficients:", theta)
 5. For a mean squared error (MSE) loss function, what is the gradient with respect to a weight $\( w_j \)$?
    - A) $\(\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
    - B) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)\)$
-   - C) \( \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \)
-   - D) \( -\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij} \
+   - C)
+
+![\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;\frac{1}{N}&space;\sum_{i=1}^{N}&space;(y_i&space;-&space;\hat{y}_i)&space;x_{ij})
+
+   - D)
+![-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;-\frac{2}{N}&space;\sum_{i=1}^{N}&space;(y_i&space;-&space;\hat{y}_i)&space;x_{ij})
 
 
 6. In gradient descent, what is the purpose of the gradient?
