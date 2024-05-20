@@ -159,7 +159,7 @@ print(f"Maximum Likelihood Estimate of the Mean: {max_likelihood_mu}")
 
 In information theory, the amount of information conveyed by an event is inversely related to its probability. Rare events provide more information when they occur compared to common events. The measure of information content, or self-information, for an event with probability $p$ is given by:
 
-\[ I(p) = -\log(p) \]
+$\[ I(p) = -\log(p) \]$
 
 This formula implies that as the probability $p$ decreases, the information content $I(p)$ increases.
 
@@ -167,7 +167,7 @@ This formula implies that as the probability $p$ decreases, the information cont
 
 Claude Shannon, the father of information theory, introduced the concept of entropy as a measure of the uncertainty or unpredictability in a set of possible outcomes. For a discrete random variable $X$ with possible outcomes $x_1, x_2, \ldots, x_n$ and corresponding probabilities $p(x_1), p(x_2), \ldots, p(x_n)$, the entropy $H(X)$ is defined as:
 
-\[ H(X) = -\sum_{i=1}^{n} p(x_i) \log p(x_i) \]
+$\[ H(X) = -\sum_{i=1}^{n} p(x_i) \log p(x_i) \]$
 
 Entropy quantifies the average amount of information produced by a stochastic source of data. It is maximized when all outcomes are equally likely and minimized when one outcome is certain.
 
@@ -185,13 +185,13 @@ Consider a fair coin with two outcomes: heads ($H$) and tails ($T$), each with a
 1. **Identify the Probabilities**: $p(H) = 0.5$ and $p(T) = 0.5$.
 2. **Apply Shannon's Formula**:
 
-\[ H(X) = - (0.5 \log 0.5 + 0.5 \log 0.5) \]
+$\[ H(X) = - (0.5 \log 0.5 + 0.5 \log 0.5) \]$
 
 Since $\log 0.5 = -1$ (assuming the logarithm is base 2),
 
-\[ H(X) = - (0.5 \times -1 + 0.5 \times -1) \]
-\[ H(X) = - (-0.5 - 0.5) \]
-\[ H(X) = 1 \]
+$\[ H(X) = - (0.5 \times -1 + 0.5 \times -1) \]$
+$\[ H(X) = - (-0.5 - 0.5) \]$
+$\[ H(X) = 1 \]$
 
 The entropy of a fair coin is 1 bit, indicating maximum uncertainty since both outcomes are equally likely.
 
