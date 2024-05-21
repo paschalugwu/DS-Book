@@ -916,7 +916,7 @@ $\[ z = w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n \]$
 
 The output, $\(y\)$, is determined by applying the step function (usually a threshold function) to the net input:
 
-\[ y = \begin{cases} 1 & \text{if } z \geq \text{threshold} \\ 0 & \text{otherwise} \end{cases} \]
+$$\[ y = \begin{cases} 1 & \text{if } z \geq \text{threshold} \\ 0 & \text{otherwise} \end{cases} \]$$
 
 ### Binary Classification with Perceptron
 In binary classification tasks, the perceptron model learns to classify input data points into one of two classes (e.g., positive or negative, spam or not spam). To achieve this, the perceptron adjusts its weights based on the training data until it can accurately separate the classes.
