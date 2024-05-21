@@ -614,7 +614,7 @@ $\[ L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(
 
 For multi-class classification, where there are more than two classes, the cross-entropy loss can be extended. Let $\( y_i \)$ be a one-hot encoded vector representing the true class label for the $\( i \)-th$ instance, and $\( \hat{y}_i \)$ be the predicted probability vector for the $\( i \)-th$ instance. The multi-class cross-entropy loss for a single instance is given by:
 
-$\[ L(y_i, \hat{y}_i) = - \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij}) \]$
+![L(y_i, \hat{y}_i) = - \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij})](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;L(y_i,&space;\hat{y}_i)&space;=&space;-&space;\sum_{j=1}^{C}&space;y_{ij}&space;\log(\hat{y}_{ij}))
 
 where $\( C \)$ is the number of classes, $\( y_{ij} \)$ is 1 if the $\( i \)-th$ instance belongs to class $\( j \)$ and 0 otherwise, and $\( \hat{y}_{ij} \)$ is the predicted probability of the $\( i \)-th$ instance belonging to class $\( j \)$.
 
