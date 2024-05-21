@@ -583,12 +583,15 @@ print("Estimated coefficients:", theta)
 2. B) The learning rate.
 3. C) The gradient of the error function with respect to the weights.
 4. B) The algorithm may overshoot the minimum.
-5. D) $\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)$
-6. B) To determine the direction to adjust the weights.
-7. C) When the changes in weights become very small.
-8. B) To allow the model to fit the data more accurately.
-9. A) Optimizing the weights of a neural network.
-10. B) To balance the speed of convergence and stability of the algorithm.
+5. D)
+
+   ![\(-\frac{2}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i) x_{ij}\)](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;-\frac{2}{N}&space;\sum_{i=1}^{N}&space;(y_i&space;-&space;\hat{y}_i)&space;x_{ij})
+
+7. B) To determine the direction to adjust the weights.
+8. C) When the changes in weights become very small.
+9. B) To allow the model to fit the data more accurately.
+10. A) Optimizing the weights of a neural network.
+11. B) To balance the speed of convergence and stability of the algorithm.
 
 ## 5. Error Function Formulation
 
