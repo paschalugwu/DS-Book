@@ -915,8 +915,6 @@ The weighted sum, also known as the net input, is represented mathematically as:
 $\[ z = w_1 \times x_1 + w_2 \times x_2 + ... + w_n \times x_n \]$
 
 The output, $\(y\)$, is determined by applying the step function (usually a threshold function) to the net input:
-
-
 ![y = \begin{cases} 1 & \text{if } z \geq \text{threshold} \\ 0 & \text{otherwise} \end{cases}](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;y&space;=&space;\begin{cases}&space;1&space;&\text{if&space;}z&space;\geq&space;\text{threshold}&space;\\&space;0&space;&\text{otherwise}&space;\end{cases})
 
 
