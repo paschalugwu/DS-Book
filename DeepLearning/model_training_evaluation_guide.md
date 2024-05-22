@@ -2,7 +2,7 @@
 
 In the ever-expanding realm of data science and machine learning, mastering the intricacies of model training and evaluation is paramount. This comprehensive guide aims to equip you with a deep understanding of fundamental concepts and advanced techniques essential for developing robust and high-performing machine learning models. Covering topics ranging from the nuances of underfitting and overfitting to the practical implementation of training methodologies using PyTorch, this note serves as an indispensable resource for aspiring data scientists and seasoned practitioners alike.
 
-## Distinguishing Between Underfitting and Overfitting
+## 1. Distinguishing Between Underfitting and Overfitting
 
 ### What are Underfitting and Overfitting?
 
@@ -179,7 +179,7 @@ print("Test MSE:", mean_squared_error(y_test, y_test_pred))
 9. C
 10. C
 
-## Training, Validation, and Testing
+## 2. Training, Validation, and Testing
 
 ### Different Ways to Split Data
 
@@ -356,7 +356,7 @@ print(f"Testing Accuracy: {test_accuracy}")
 9. B
 10. B
 
-## Evaluation of Model Performance
+## 3. Evaluation of Model Performance
 
 ### Collecting Metrics During Training
 
@@ -365,34 +365,34 @@ Evaluating the performance of a machine learning model is crucial to ensure it g
 #### Common Metrics
 
 1. **Accuracy**: The ratio of correctly predicted instances to the total instances.
-   \[
+   $\[
    \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
-   \]
+   \]$
 
 2. **Precision**: The ratio of correctly predicted positive observations to the total predicted positives.
-   \[
+   $\[
    \text{Precision} = \frac{\text{True Positives}}{\text{True Positives + False Positives}}
-   \]
+   \]$
 
 3. **Recall**: The ratio of correctly predicted positive observations to all observations in the actual class.
-   \[
+   $\[
    \text{Recall} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}
-   \]
+   \]$
 
 4. **F1 Score**: The weighted average of Precision and Recall.
-   \[
+   $\[
    \text{F1 Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
-   \]
+   \]$
 
 5. **Loss**: A measure of how well the model's predictions match the true values. Common loss functions include Mean Squared Error (MSE) for regression and Cross-Entropy Loss for classification.
    - **Mean Squared Error (MSE)**:
-     \[
+     $\[
      \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-     \]
+     \]$
    - **Cross-Entropy Loss**:
-     \[
+     $\[
      \text{Cross-Entropy Loss} = -\frac{1}{n} \sum_{i=1}^{n} \left[y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)\right]
-     \]
+     \]$
 
 ### Visualizing Training Progress Using TensorBoard
 
@@ -539,7 +539,7 @@ Suppose we are training a neural network to classify handwritten digits from the
 9. B
 10. C
 
-## Techniques to Avoid Underfitting and Overfitting
+## 4. Techniques to Avoid Underfitting and Overfitting
 
 ### Early Stopping
 
@@ -731,7 +731,7 @@ Suppose we are building a neural network to classify handwritten digits. Here's 
 9. B
 10. C
 
-## Optimization of Model Training
+## 5. Optimization of Model Training
 
 ### Loss Function and Optimizer
 
