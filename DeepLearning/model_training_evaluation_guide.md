@@ -574,16 +574,14 @@ Regularization techniques add a penalty to the loss function to constrain the mo
 #### L1 Regularization (Lasso)
 
 Adds the absolute value of the coefficients to the loss function:
-$\[
-\text{Loss} = \text{Loss}_{\text{original}} + \lambda \sum_{i=1}^{n} |w_i|
-\]$
+
+![Loss equation](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;\text{Loss}&space;=&space;\text{Loss}_{\text{original}}&space;&plus;&space;\lambda&space;\sum_{i=1}^{n}&space;|w_i|)
 
 #### L2 Regularization (Ridge)
 
 Adds the squared value of the coefficients to the loss function:
-$\[
-\text{Loss} = \text{Loss}_{\text{original}} + \lambda \sum_{i=1}^{n} w_i^2
-\]$
+
+![Loss equation](https://latex.codecogs.com/png.latex?\dpi{200}&space;\bg_white&space;\text{Loss}&space;=&space;\text{Loss}_{\text{original}}&space;&plus;&space;\lambda&space;\sum_{i=1}^{n}&space;w_i^2)
 
 #### Example Code Snippet
 
