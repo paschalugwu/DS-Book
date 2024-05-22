@@ -574,16 +574,16 @@ Regularization techniques add a penalty to the loss function to constrain the mo
 #### L1 Regularization (Lasso)
 
 Adds the absolute value of the coefficients to the loss function:
-\[
+$\[
 \text{Loss} = \text{Loss}_{\text{original}} + \lambda \sum_{i=1}^{n} |w_i|
-\]
+\]$
 
 #### L2 Regularization (Ridge)
 
 Adds the squared value of the coefficients to the loss function:
-\[
+$\[
 \text{Loss} = \text{Loss}_{\text{original}} + \lambda \sum_{i=1}^{n} w_i^2
-\]
+\]$
 
 #### Example Code Snippet
 
@@ -740,19 +740,19 @@ In neural network training, the loss function measures how well the model's pred
 #### Common Loss Functions
 
 1. **Mean Squared Error (MSE)**: Suitable for regression problems.
-   \[
+   $\[
    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-   \]
+   \]$
 
 2. **Binary Cross-Entropy**: Used for binary classification problems.
-   \[
+   $\[
    \text{Binary Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \left[y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)\right]
-   \]
+   \]$
 
 3. **Categorical Cross-Entropy**: Used for multi-class classification problems.
-   \[
+   $\[
    \text{Categorical Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \sum_{j=1}^{m} y_{ij} \log(\hat{y}_{ij})
-   \]
+   \]$
 
 #### Common Optimizers
 
@@ -792,13 +792,13 @@ Momentum is a technique that helps accelerate SGD in the relevant direction and 
 
 #### Mathematically
 
-\[ \Delta w(t) = -\eta \nabla J(w(t)) + \alpha \Delta w(t-1) \]
+$\[ \Delta w(t) = -\eta \nabla J(w(t)) + \alpha \Delta w(t-1) \]$
 
 Where:
-- \( \Delta w(t) \) is the update vector at time step \( t \).
-- \( \eta \) is the learning rate.
-- \( \nabla J(w(t)) \) is the gradient of the loss function.
-- \( \alpha \) is the momentum parameter.
+- $\( \Delta w(t) \)$ is the update vector at time step $\( t \)$.
+- $\( \eta \)$ is the learning rate.
+- $\( \nabla J(w(t)) \)$ is the gradient of the loss function.
+- $\( \alpha \)$ is the momentum parameter.
 
 ### Example Code Snippet
 
