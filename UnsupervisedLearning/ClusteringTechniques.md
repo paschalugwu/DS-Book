@@ -282,7 +282,7 @@ In an e-commerce setting, K-Means clustering can be used to segment customers ba
 
 6. What parameter must be specified when applying K-Means clustering?
     - a) Number of features
-    - b) Number of clusters (\( K \))
+    - b) Number of clusters $(\( K \))$
     - c) Maximum number of iterations
     - d) Random seed
 
@@ -317,7 +317,7 @@ In an e-commerce setting, K-Means clustering can be used to segment customers ba
 3. b) To minimize the sum of squared distances between data points and their nearest centroid
 4. c) 3
 5. b) Recomputing centroids as the mean of data points in each cluster
-6. b) Number of clusters (\( K \))
+6. b) Number of clusters $(\( K \))$
 7. c) `kmeans.fit`
 8. c) Red
 9. b) To ensure reproducibility of the results
@@ -327,7 +327,7 @@ In an e-commerce setting, K-Means clustering can be used to segment customers ba
 
 ### Introduction
 
-Determining the optimal number of clusters (\( K \)) in K-Means clustering is crucial for ensuring meaningful and accurate clustering results. Various techniques can help in selecting the optimal \( K \). This section will cover the most commonly used methods, including the Elbow Method, Silhouette Analysis, and the Gap Statistic.
+Determining the optimal number of clusters $(\( K \))$ in K-Means clustering is crucial for ensuring meaningful and accurate clustering results. Various techniques can help in selecting the optimal \( K \). This section will cover the most commonly used methods, including the Elbow Method, Silhouette Analysis, and the Gap Statistic.
 
 ### Techniques for Determining the Optimal Number of Clusters
 
