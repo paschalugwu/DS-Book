@@ -190,9 +190,7 @@ CNNs are widely used in various real-world applications:
    - a) By using the same set of weights across different parts of the input
    - b) By reducing the number of layers
    - c) By increasing the number of neurons
-   - d) By not using activation
-
- functions
+   - d) By not using activation functions
 
 9. What is the main function of the fully connected layer in a CNN?
    - a) To apply convolutional operations
