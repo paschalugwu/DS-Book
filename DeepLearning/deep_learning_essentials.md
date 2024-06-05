@@ -49,8 +49,9 @@ print(normalized_data)
 ```
 
 #### Augmentation
+Augmentation is an essential technique in image processing used to artificially increase the size of a dataset by creating modified versions of images, thereby improving model generalization and performance. By exposing the model to a more diverse set of data during training, augmentation helps the model learn more robust features that generalize better to new, unseen data. This process also reduces the risk of overfitting, where the model performs well on training data but poorly on validation or test data. Overall, augmentation leads to a more reliable and effective model.
 
-Data augmentation is commonly used in image processing to artificially increase the size of a dataset by creating modified versions of images. Here is an example using the `ImageDataGenerator` from `keras`:
+Here is an example using the `ImageDataGenerator` from `keras`:
 
 ```python
 from keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
