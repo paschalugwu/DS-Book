@@ -2,6 +2,8 @@
 
 This guide provides a comprehensive overview of the core concepts in Deep Learning. It covers the essential steps from data preparation to model evaluation, equipping you with the knowledge to build and train effective deep learning models.
 
+![Development Process](Image URL)
+
 ## Data Loading and Preprocessing
 
 ### Loading Datasets
