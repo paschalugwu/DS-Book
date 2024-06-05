@@ -874,9 +874,7 @@ plt.show()
    - c) To classify the input data
    - d) To normalize the input data
 
-10. In anomaly
-
- detection using autoencoders, what would typically indicate an anomaly?
+10. In anomaly detection using autoencoders, what would typically indicate an anomaly?
     - a) A very low reconstruction error
     - b) A very high reconstruction error
     - c) A reconstruction error close to zero
