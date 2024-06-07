@@ -26,12 +26,12 @@ GMMs are often used for clustering tasks, where the goal is to partition data in
    - GMMs estimate the probability density function of the observed data. Each data point is assumed to be generated from a mixture of Gaussian distributions.
    - Mathematically, the probability density function of a GMM is represented as the weighted sum of Gaussian distributions:
 
-   \[ p(x) = \sum_{i=1}^{K} \pi_i \mathcal{N}(x | \mu_i, \Sigma_i) \]
+   $\[ p(x) = \sum_{i=1}^{K} \pi_i \mathcal{N}(x | \mu_i, \Sigma_i) \]$
 
    where:
-   - \( p(x) \) is the probability density function.
-   - \( \pi_i \) is the weight associated with the \(i\)-th component.
-   - \( \mathcal{N}(x | \mu_i, \Sigma_i) \) is the Gaussian distribution with mean \( \mu_i \) and covariance matrix \( \Sigma_i \).
+   - $\( p(x) \)$ is the probability density function.
+   - $\( \pi_i \)$ is the weight associated with the $\(i\)$-th component.
+   - $\( \mathcal{N}(x | \mu_i, \Sigma_i) \)$ is the Gaussian distribution with mean $\( \mu_i \)$ and covariance matrix $\( \Sigma_i \)$.
 
 2. **Expectation-Maximization (EM) Algorithm**:
    - GMMs utilize the Expectation-Maximization algorithm to estimate the parameters (mean, covariance, and weights) of the Gaussian components.
